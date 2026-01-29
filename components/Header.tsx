@@ -143,6 +143,15 @@ export default function Header() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
                           </div>
+                        ) : subItem.href.startsWith('http') ? (
+                          <a
+                            href={subItem.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block px-4 py-2 text-sm text-white hover:bg-[var(--primary-orange)]"
+                          >
+                            {subItem.label}
+                          </a>
                         ) : (
                           <Link
                             href={subItem.href}
@@ -220,6 +229,16 @@ export default function Header() {
                                 ))}
                               </div>
                             </>
+                          ) : subItem.href.startsWith('http') ? (
+                            <a
+                              href={subItem.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block px-4 py-2 text-sm text-gray-600 hover:text-[var(--primary-orange)]"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {subItem.label}
+                            </a>
                           ) : (
                             <Link
                               href={subItem.href}

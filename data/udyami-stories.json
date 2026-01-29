@@ -5,122 +5,464 @@
       "slug": "sachin-verma",
       "name": "Sachin Verma",
       "company": "Santosh Masala Udyog",
-      "image": "/images/udyamis/sachin-verma.png",
-      "shortDescription": "Revived his father's spice business into a thriving enterprise",
-      "fullStory": "Sachin Verma revived his father Rajendra Verma's spice business that had declined due to market competition from factory-made brands. Starting with unbranded packets in 2013, Sachin officially registered Santosh Masala in 2018. During the COVID-19 pandemic, when larger spice manufacturers faced supply chain disruptions, Santosh Masala flourished by serving local markets in Kushinagar, Deoria, and Ballia districts.",
-      "achievements": [
-        "Expanded product line to 9 varieties including vegetable masala, meat masala, red chili powder, and turmeric powder",
-        "Created employment for 9 individuals, including 4 women",
-        "Secured ₹10 lakh loan through Jagriti Enterprise Center (September 2023)",
-        "Purchased packaging machinery and essential equipment",
-        "Plans to introduce biryani and chana masala to product lineup"
+      "tagline": "From Crisis to Triumph",
+      "image": "/images/udyamis/sachin-verma/main.png",
+      "cardImage": "/images/udyamis/sachin-verma.png",
+      "gallery": [
+        "/images/udyamis/sachin-verma/gallery-1.png",
+        "/images/udyamis/sachin-verma/gallery-2.png",
+        "/images/udyamis/sachin-verma/gallery-3.png"
       ],
-      "quote": "Transformed a 20-year-old family dream into a thriving enterprise within one year",
-      "location": "Kushinagar, Uttar Pradesh"
+      "location": "Tamkuhiraj, Kushinagar, Uttar Pradesh",
+      "category": "Food & Spices",
+      "shortDescription": "Revived his father's 20-year-old spice business dream during COVID-19, turning it into a thriving enterprise serving three districts.",
+      "story": {
+        "title": "From Crisis to Triumph: The Inspiring Rise of Santosh Masala",
+        "sections": [
+          {
+            "heading": null,
+            "content": "For Rajendra Verma, nearing the twilight of his years, the greatest gift came not in the form of wealth or accolades, but from his son Sachin—a gift that carried the weight of a dream cherished for over two decades. It was more than a gesture; it was the resurrection of a legacy. Sachin, fueled by the same passion that had once driven his father, established a spice company in their family's name, calling it Santosh Masala—a tribute to his younger brother."
+          },
+          {
+            "heading": null,
+            "content": "Amid a world gripped by the uncertainty of the COVID-19 pandemic, as industries across the globe crumbled, Santosh Masala stood tall, defying the odds. While larger, more renowned brands found themselves paralyzed by supply chain disruptions, Sachin found a way to bring his spices to the kitchens of Kushinagar, Deoria, and Ballia. At the time when everything and everyone seemed to be falling apart at the seams, one small spice brand was rising, quietly but persistently."
+          },
+          {
+            "heading": "A Dream Faded, Then Revived",
+            "content": "It all began in 1998, in the unassuming village of Tamkuhiraj, where Rajendra Verma started his spice business. Known for the uncompromising purity of his products, he attracted customers from far and wide. People trusted the quality of his ground spices, and for years, he thrived. But as pre-packaged, factory-made spices began flooding the market, Rajendra's little venture began to dwindle. The steady decline became a source of heartbreak for him as he neared retirement. The dream that once soared on the wings of pure intent was losing its light."
+          },
+          {
+            "heading": null,
+            "content": "But Sachin, Rajendra's eldest son, couldn't bear to see the family's hard work disappear. In 2013, with humble beginnings, he began selling spices in plain, unbranded packets. It was a small step, and success didn't come quickly. For three years, he toiled with limited returns, battling to revive what his father had once started. But he knew this journey needed more than just effort—it required vision. So, in 2018, Sachin officially registered Santosh Masala. The road ahead was still full of challenges, as the market was dominated by bigger players. The family's dream was reborn, but it struggled to find its footing."
+          },
+          {
+            "heading": "Standing Ground Amid Crisis",
+            "content": "When the pandemic struck, the world came to a standstill. The giants of the spice industry, with their complex networks and massive infrastructures, found themselves caught in a tangle of broken supply chains. But for Sachin, this was a moment of opportunity. The very disruptions that crippled the big brands opened doors for local, nimble entrepreneurs like him. With grit and determination, Sachin ensured that Santosh Masala filled the gap left by the bigger brands. Slowly, households in his district began reaching for his spices, drawn by their quality and purity. The family's spices, once a fading memory, were now cooking their way into new homes, new hearts."
+          },
+          {
+            "heading": "Finding Strength in Community: The Jagriti Connection",
+            "content": "Despite his progress, Sachin faced significant hurdles. Limited capital, a lack of expertise in scaling a business—these were obstacles that could have derailed his journey. But Sachin was not alone in his fight. In September 2023, he connected with the Jagriti Enterprise Center in Tamkuhiraj, where he found the mentorship he so desperately needed. With the guidance of Udyam Mitra Manish and Udyam Corp Anand, Sachin was not only able to secure a vital loan of ₹10 lakhs, but he was also equipped with the tools and knowledge necessary to grow his business."
+          },
+          {
+            "heading": null,
+            "content": "With the loan, he purchased packaging machinery, invested in other essential equipment, and—perhaps most importantly—received mentorship. The Jagriti team introduced him to seasoned entrepreneurs, offered him insights on market access, and provided workshops that taught him how to maintain digital accounts. This wasn't just about financial help—it was about reshaping how Sachin saw his business and its potential."
+          },
+          {
+            "heading": "The Year of Harvest",
+            "content": "In just one year, everything changed. What had taken his father two decades to build, Sachin managed to achieve in a fraction of that time, thanks to the unwavering support from Jagriti. His product range expanded—Santosh Masala now boasted nine varieties, from vegetable masala to meat masala, red chili powder, turmeric powder, and more. Plans were underway to introduce biryani and chana masala to his growing lineup. More than just a business success, Santosh Masala became a source of employment, providing jobs to nine individuals, including four women."
+          },
+          {
+            "heading": null,
+            "content": "As Sachin reflects on the past year, there is a deep sense of fulfillment. The legacy his father started is not only alive but thriving. He's not just running a business—he's building a future for his family, his employees, and the community that believed in him."
+          },
+          {
+            "heading": "A Story of Transformation",
+            "content": "The story of Santosh Masala is not just about spices. It's about the power of persistence, the importance of community support, and the incredible capacity for growth when people come together. With the mentorship and resources provided by Jagriti Enterprise Center, Sachin's journey today serves as a beacon of hope for small businesses across India. What began as a family's humble dream has now blossomed into a brand of resilience and success."
+          },
+          {
+            "heading": null,
+            "content": "Santosh Masala's rise is a testament to the human spirit's ability to find light even in the darkest times, proving that, with heart, help, and hard work, any dream can come true."
+          }
+        ]
+      },
+      "quote": "With heart, help, and hard work, any dream can come true.",
+      "stats": [
+        { "label": "Year Started", "value": "1998" },
+        { "label": "Registered", "value": "2018" },
+        { "label": "Loan Secured", "value": "₹10 Lakhs" },
+        { "label": "Product Varieties", "value": "9" },
+        { "label": "Jobs Created", "value": "9" },
+        { "label": "Women Employed", "value": "4" }
+      ],
+      "achievements": [
+        "Secured business loan of ₹10 lakhs through Jagriti",
+        "Expanded product line to 9 varieties",
+        "Created employment for 9 individuals including 4 women",
+        "Survived and thrived during COVID-19 pandemic",
+        "Serves three districts: Kushinagar, Deoria, and Ballia"
+      ]
     },
     {
       "id": "sacchidanand-shahi",
       "slug": "sacchidanand-shahi",
       "name": "Sacchidanand Shahi",
       "company": "Sarvdev Agro Pvt. Ltd",
-      "image": "/images/udyamis/sacchidanand-shahi.png",
-      "shortDescription": "Built a company with ₹5 million turnover from just ₹20,000",
-      "fullStory": "Sacchidanand's journey exemplifies determination overcoming financial constraints. Starting with just ₹20,000 after returning from Dubai during COVID-19, he built a company that achieved annual turnover exceeding ₹5 million within five years. After his first venture Riddhi-Siddhi Home Industries collapsed with ₹800,000 in losses, meeting Jagriti's enterprise leader Markandey Dayal Tripathi provided crucial mentorship to restart.",
-      "achievements": [
-        "Founded Sarvdev Agro Pvt. Ltd in October 2022",
-        "Achieved annual turnover exceeding ₹5 million",
-        "Established distributors across Gorakhpur, Deoria, and Kushinagar districts",
-        "Planning ₹1.6 million investment in an oil mill creating 10+ jobs"
+      "tagline": "Flight of Determination",
+      "image": "/images/udyamis/sacchidanand-shahi/main.png",
+      "cardImage": "/images/udyamis/sacchidanand-shahi.png",
+      "gallery": [
+        "/images/udyamis/sacchidanand-shahi/gallery-1.png",
+        "/images/udyamis/sacchidanand-shahi/gallery-2.png",
+        "/images/udyamis/sacchidanand-shahi/gallery-3.png"
       ],
+      "location": "Semra Village, Deoria, Uttar Pradesh",
+      "category": "Agriculture",
+      "shortDescription": "From ₹20,000 to ₹5 Million annual turnover in five years, overcoming an ₹8 lakh loss from his first venture.",
+      "story": {
+        "title": "Flight of Determination: From ₹20,000 to ₹5 Million",
+        "sections": [
+          {
+            "heading": null,
+            "content": "\"Destiny favors those who breathe life into their dreams. It's not the wings but the willpower that makes us fly.\" These poetic lines find their true essence in the story of Sachchidanand Shahi. From the village of Semra, 30 kilometers away from Deoria district headquarters, Sachchidanand embarked on a journey with a modest capital of ₹20,000. Within five years, his company's annual turnover surpassed ₹5 million. His path to success was strewn with failures, but he never gave up. His resolve grew stronger with each challenge, and he soared higher."
+          },
+          {
+            "heading": "The Seeds of Entrepreneurship",
+            "content": "After completing his graduation, Sachchidanand dreamed of starting his own business. Yet, the lack of capital kept this dream at bay. For 16 years, he worked across Delhi and Dubai, taking on part-time jobs to save more money. Even then, gathering sufficient capital remained elusive. In 2019, the COVID-19 pandemic brought economic turmoil, and he was sent home from his job. With just ₹20,000 left, he faced a daunting choice: sustain his household or pursue his business dream."
+          },
+          {
+            "heading": null,
+            "content": "Returning home from Dubai, Sachchidanand immersed himself in farming, using the earnings to manage household expenses while saving his ₹20,000 for a startup. In September 2020, he launched Riddhi-Siddhi Home Industries, a spice company, with his two brothers and a friend. They took an ₹80,000 Mudra loan to buy packing and grinding machines. They began purchasing whole spices, grinding them, and selling them in the market. However, market challenges soon led to an ₹800,000 loss. His partners withdrew, and the company shut down."
+          },
+          {
+            "heading": "Finding Strength in Adversity",
+            "content": "Sachchidanand recalls that the company's closure left each of the four partners with a loss of ₹200,000. None were keen on restarting the business. At this juncture, they met Jagriti's enterprise leader, Markandey Dayal Tripathi. He awakened the Hanuman within Sachchidanand, encouraging him to learn from past mistakes and move forward. Partnering with Abhay Pratap Singh from Nakail village, they launched Sarvadev Agro Pvt. Ltd. in October 2022, expanding beyond spices to various products."
+          },
+          {
+            "heading": "Gaining Momentum",
+            "content": "Sachchidanand, now the director of Sarvadev Agro Pvt. Ltd., rebuilt the company under Jagriti's guidance. They established distributors in markets across Gorakhpur, Deoria, and Kushinagar, boosting product demand. Jagriti provided digital training, enabling Sachchidanand to manage company accounts via mobile apps, saving on accountant salaries. Workshops organized by Jagriti boosted his morale and connected him with other entrepreneurs, introducing new business strategies."
+          },
+          {
+            "heading": null,
+            "content": "Entrepreneur Sachchidanand Shahi believes that patience and perseverance can solve even the greatest challenges. This principle guided him to success. With determination, he found support and trust in Jagriti and Abhay Pratap Singh. Learning from the losses of his first startup, he corrected his mistakes and made a fresh start. Now, he is preparing to invest ₹1.6 million in an oil mill, providing employment to 10 people, which will soon double."
+          },
+          {
+            "heading": "A Promise of Hope",
+            "content": "Sachchidanand's journey is a beacon of hope. His story underscores that with patience, resilience, and support, even the most challenging circumstances can be overcome. Jagriti's trust and guidance have been instrumental in his success, showcasing that with unwavering determination, dreams can indeed take flight."
+          }
+        ]
+      },
       "quote": "Destiny favors those who breathe life into their dreams. It's not the wings but the willpower that makes us fly.",
-      "location": "Semra village, Deoria, Uttar Pradesh"
+      "stats": [
+        { "label": "Starting Capital", "value": "₹20,000" },
+        { "label": "Annual Turnover", "value": "₹50 Lakhs" },
+        { "label": "Years Working", "value": "16" },
+        { "label": "First Venture Loss", "value": "₹8 Lakhs" },
+        { "label": "New Investment", "value": "₹16 Lakhs" },
+        { "label": "Jobs Creating", "value": "10+" }
+      ],
+      "achievements": [
+        "Built ₹5 million turnover company from ₹20,000",
+        "Overcame ₹800,000 loss from first venture",
+        "Established distributors across three districts",
+        "Planning ₹1.6 million oil mill investment",
+        "Will create employment for 10+ people"
+      ]
     },
     {
       "id": "abhishek-kushwaha",
       "slug": "abhishek-kushwaha",
       "name": "Abhishek Kushwaha",
       "company": "Abonics India Pvt. Ltd",
-      "image": "/images/udyamis/abhishek-kushwaha.png",
-      "shortDescription": "Young innovator who invented a patented digital walking stick",
-      "fullStory": "Abhishek's journey began at age 16 when his grandfather suffered a paralysis stroke. Watching his grandfather struggle sparked innovation - he designed a digital walking stick featuring eight technological features including emergency light, power bank, watch system, SD card music system, presence indication light, bell system, and charging system. The Indian government granted him a patent for this invention.",
-      "achievements": [
-        "Received patent from Indian government for digital walking stick",
-        "Won 23+ awards including Bharat Gaurav Samman, Kishore Vaigyanik Samman",
-        "National Child Scientist Award recipient",
-        "105th Indian Science Congress Award",
-        "Developing science and engineering labs for ITIs and polytechnics"
+      "tagline": "The Engineering of Dreams",
+      "image": "/images/udyamis/abhishek-kushwaha/main.png",
+      "cardImage": "/images/udyamis/abhishek-kushwaha.png",
+      "gallery": [
+        "/images/udyamis/abhishek-kushwaha/gallery-1.png",
+        "/images/udyamis/abhishek-kushwaha/gallery-2.png",
+        "/images/udyamis/abhishek-kushwaha/gallery-3.png"
       ],
-      "quote": "Every time his grandfather needed to move, Abhishek would hand him a walking stick and guide him by holding a torch ahead.",
-      "location": "Ramkaran Patti village, Kushinagar, Uttar Pradesh",
-      "age": 23
+      "location": "Ramkaran Patti, Kushinagar, Uttar Pradesh",
+      "category": "Innovation & Technology",
+      "shortDescription": "At 23, invented a patented digital walking stick with 8 features to help his paralyzed grandfather, winning 24+ national awards.",
+      "story": {
+        "title": "The Engineering of Dreams: A Grandson's Love",
+        "sections": [
+          {
+            "heading": "The Birth of Innovation",
+            "content": "At just 16 years old, Abhishek Kushwaha watched helplessly as his 62-year-old grandfather struggled with the limitations brought on by paralysis. Every time his grandfather needed to move, Abhishek would hand him a walking stick and guide him by holding a torch ahead. But the moments when Abhishek wasn't around filled him with a sense of helplessness. His grandfather's suffering became a constant weight on his heart."
+          },
+          {
+            "heading": null,
+            "content": "Driven by his love and a desire to ease his grandfather's pain, Abhishek channeled his frustration into a solution. He invented a special walking stick, one that could help his grandfather walk independently, even in the dark. This wasn't just any stick—it was equipped with eight digital features that transformed his grandfather's life. Today, the Indian government has recognized Abhishek's innovation by awarding him a patent for his creation."
+          },
+          {
+            "heading": "A Visionary from the Start",
+            "content": "This is the story of Abhishek Kushwaha, the founder of Abonics India Private Limited, hailing from Ramkaran Patti village in Kushinagar. Now 23, Abhishek has always had an innate talent for engineering. From a young age, he would look for innovative solutions to any problem he encountered."
+          },
+          {
+            "heading": null,
+            "content": "In 2017, when his grandfather Dhruv Kushwaha was struck by paralysis, his mobility was severely impacted. His eyesight also deteriorated. Abhishek became his constant companion, the literal \"stick\" supporting him through old age. Observing his grandfather's difficulties, Abhishek designed a digital stick that allowed his grandfather to walk unassisted, even at night. The stick not only helped with mobility but also provided entertainment, proving to be a life-changing invention."
+          },
+          {
+            "heading": "Gaining Momentum: The Business Takes Off",
+            "content": "Abhishek recalls how, despite having the idea for the product, he faced challenges in bringing it to the market and raising funds. That's when he came across the vision and mission of Jagriti's founder, Shashank Mani, which deeply inspired him. In September 2023, Abhishek became a part of Jagriti, which supported him at every step of his entrepreneurial journey."
+          },
+          {
+            "heading": null,
+            "content": "In a few months, Jagriti helped him secure financial assistance of one lakh rupees. Through Jagriti's guidance, his company, Abonics India Private Limited, has now made market connections in over 30 locations. Along with his college classmate and co-founder, Mohammad Kaif, Abhishek is now working to build science and engineering labs in ITIs, polytechnics, and other colleges. Jagriti is also helping Abhishek set up a factory for manufacturing his digital sticks."
+          },
+          {
+            "heading": "The Features That Set the Digital Stick Apart",
+            "content": "Abhishek's innovative digital stick is more than just a walking aid—it's a multi-functional tool designed with care and precision. These are the key features that make it stand out: An emergency light, A power bank for the light, A watch system for checking time, An SD card music system for entertainment, A present indication light for better visibility, A bell system for road safety, and A charging system for the battery. With these features, Abhishek's digital stick ensures both safety and convenience for the elderly, providing not just mobility but also comfort and peace of mind."
+          },
+          {
+            "heading": "A Journey of Recognition",
+            "content": "At the young age of 23, Abhishek has left an indelible mark on national and international stages. His projects, ranging from water conservation to the digital stick, have earned him top positions in science exhibitions. He has been honored more than two dozen times, with accolades including The Bharat Gaurav Samman, The Kishore Vaigyanik Samman, The National Child Scientist Award, The 105th Indian Science Congress Award, and The National Education Society Award."
+          },
+          {
+            "heading": null,
+            "content": "His journey reminds us that innovation is born from empathy, and with persistence, even the most personal problems can lead to global solutions. With the continued support of Jagriti, Abhishek's vision is gaining momentum, ensuring that more innovations like his digital stick reach those who need them the most."
+          }
+        ]
+      },
+      "quote": "Innovation is born from empathy, and with persistence, even the most personal problems can lead to global solutions.",
+      "stats": [
+        { "label": "Age", "value": "23" },
+        { "label": "Stick Features", "value": "8" },
+        { "label": "Awards Won", "value": "24+" },
+        { "label": "Market Connections", "value": "30+" },
+        { "label": "Funding Received", "value": "₹1 Lakh" }
+      ],
+      "achievements": [
+        "Government patent for digital walking stick",
+        "Bharat Gaurav Samman",
+        "Kishore Vaigyanik Samman",
+        "National Child Scientist Award",
+        "105th Indian Science Congress Award",
+        "National Education Society Award",
+        "Market connections in 30+ locations"
+      ]
     },
     {
       "id": "anita-rai",
       "slug": "anita-rai",
       "name": "Anita Rai",
       "company": "Shree Mythili Enterprises",
-      "image": "/images/udyamis/anita-rai.png",
-      "shortDescription": "Master trainer who empowered 600+ women in banana fiber production",
-      "fullStory": "Anita transformed from a homemaker into an entrepreneur after her husband's poultry business failed. She traveled to the National Research Center for Banana in Chennai for specialized training and was appointed as a master trainer. In 2022, she established Shree Mythili Enterprises, producing over 20 products including banana flour, chips, vermicelli, juice, and pickles.",
-      "achievements": [
-        "Empowered 600+ women in banana fiber production",
-        "Created 150+ unique products from banana plants",
-        "Secured ₹1 lakh from Accenture and ₹2 lakh from Aavishkaar Foundation",
-        "Established pan-India market presence in Noida, Mumbai, Ghaziabad, Lucknow, Varanasi"
+      "tagline": "Enterprise Revolution",
+      "image": "/images/udyamis/anita-rai/main.png",
+      "cardImage": "/images/udyamis/anita-rai.png",
+      "gallery": [
+        "/images/udyamis/anita-rai/gallery-1.png",
+        "/images/udyamis/anita-rai/gallery-2.png",
+        "/images/udyamis/anita-rai/gallery-3.png"
       ],
+      "location": "Kushinagar, Uttar Pradesh",
+      "category": "Agro Products",
+      "shortDescription": "Master trainer who transformed banana waste into 150+ products, training 600+ women and building a pan-India enterprise.",
+      "story": {
+        "title": "Anita's Enterprise Revolution: Farmers Flourish, Women Rise",
+        "sections": [
+          {
+            "heading": null,
+            "content": "In the heart of Kushinagar, a quiet revolution is underway. What was once discarded—banana trees stripped of their fruit—has now become a treasure, turning waste into wealth for farmers. With the birth of a new industry in this region, banana fiber products are not just enriching homes but breathing life into a local economy eager for change. Behind this wave of transformation stands Anita Rai, a woman whose spirit reflects the dawn of a new era. From Banaraha Mod Sewarhi, 40 kilometers from the district headquarters, Anita crafts over 150 unique products from banana trees, fruit, and flowers. Her banana juice, in particular, is a boon for patients suffering from kidney stones, making her an essential figure in this evolving landscape."
+          },
+          {
+            "heading": "From Homemaker to Visionary Leader",
+            "content": "Anita's journey began in 1998 when she married Rajnarayan. Life took an unexpected turn when her husband's poultry business collapsed. The couple found themselves searching for new opportunities, and when the state government identified banana fiber as part of its One District One Product (ODOP) initiative in 2018, Anita saw the spark of possibility. After two decades of dedicating herself to her family as a homemaker, she took a bold leap. Anita traveled to the National Research Center for Banana in Chennai, where she received specialized training in producing banana fiber products. Her determination and newfound knowledge caught the attention of the District Industries Officer in Kushinagar, who recognized her potential and appointed her a master trainer."
+          },
+          {
+            "heading": "Rising Above Challenges: Building an Empire from Scratch",
+            "content": "As a master trainer, Anita empowered over 600 women, teaching them how to create a range of products from banana trees and flowers. But she didn't stop there. In 2022, she founded her own company, 'Shree Mythili Enterprises,' gathering a group of determined women to produce over 20 products, including banana flour, chips, vermicelli, juice, and pickles. The path was not easy. Anita faced countless challenges—paperwork, legal hurdles, and finding markets for her creations. But with Jagriti's timely support, she navigated these obstacles, her enterprise growing stronger with each step. Soon, demand for her products poured in from across India—Noida, Mumbai, Ghaziabad, Lucknow, Varanasi—and with it, a new chapter of success began."
+          },
+          {
+            "heading": "A Heartfelt Tribute to Jagriti",
+            "content": "Anita's voice swells with emotion when she speaks of Jagriti's role in her journey. \"Anand Singh and the entire Jagriti team played a crucial role in the birth of Shree Mythili Enterprises,\" she says. \"They brought me into the Jagriti cohort and secured financial aid of one lakh rupees through Accenture and an additional two lakh rupees from Aavishkaar Foundation. Their support in improving product quality and connecting me to the right markets has been invaluable. I thank them from the bottom of my heart.\""
+          }
+        ]
+      },
       "quote": "Their support in improving product quality and connecting me to the right markets has been invaluable.",
-      "location": "Kushinagar, Uttar Pradesh"
+      "stats": [
+        { "label": "Women Trained", "value": "600+" },
+        { "label": "Products Created", "value": "150+" },
+        { "label": "Company Products", "value": "20+" },
+        { "label": "Accenture Aid", "value": "₹1 Lakh" },
+        { "label": "Aavishkaar Aid", "value": "₹2 Lakhs" }
+      ],
+      "achievements": [
+        "Appointed Master Trainer by District Industries Officer",
+        "Trained over 600 women in banana fiber production",
+        "Created 150+ unique products from banana plants",
+        "Secured ₹3 lakhs funding from Accenture & Aavishkaar",
+        "Pan-India market presence in 5+ major cities"
+      ]
     },
     {
       "id": "poonam",
       "slug": "poonam",
       "name": "Poonam",
-      "company": "Gaurishankar Industries (Drone Didi)",
-      "image": "/images/udyamis/poonam.png",
-      "shortDescription": "From homemaker to camphor manufacturing entrepreneur",
-      "fullStory": "Poonam spent 15 years as a homemaker before COVID-19 devastated their family business. During the second wave in 2021, she researched online, watched YouTube tutorials, and proposed launching a camphor manufacturing venture. They established Gaurishankar Industries in March 2023, launching their flagship product Siddhi Aarti Kapoor.",
-      "achievements": [
-        "Products distributed across Gorakhpur, Deoria, and Kushinagar districts",
-        "Expanded product line with multiple camphor sizes",
-        "Successfully transitioned from struggling venture to thriving enterprise",
-        "Plans to expand into complementary religious ritual products"
+      "company": "Gaurishankar Industries",
+      "tagline": "From Homemaker to Entrepreneur",
+      "image": "/images/udyamis/poonam/main.png",
+      "cardImage": "/images/udyamis/poonam.png",
+      "gallery": [
+        "/images/udyamis/poonam/gallery-1.png",
+        "/images/udyamis/poonam/gallery-2.png",
+        "/images/udyamis/poonam/gallery-3.png",
+        "/images/udyamis/poonam/gallery-4.png",
+        "/images/udyamis/poonam/gallery-5.png"
       ],
-      "quote": "My husband initially dismissed her input, believing she lacked business acumen. But persistence proved him wrong.",
-      "location": "Gauribazar, Deoria, Uttar Pradesh"
+      "location": "Gauribazar, Deoria, Uttar Pradesh",
+      "category": "Religious Products",
+      "shortDescription": "After 15 years as a homemaker, launched Siddhi Aarti Kapoor camphor brand during COVID, now serving three districts.",
+      "story": {
+        "title": "From Homemaker to Entrepreneur: Poonam's Camphor Revolution",
+        "sections": [
+          {
+            "heading": null,
+            "content": "Poonam hails from Gauribazar in Deoria district. A graduate, she spent nearly 15 years managing her household after marriage—cooking, sending children to school, and handling daily chores. Her husband, Awadhesh Nigam, ran a wholesale business in food products like flour and bran. When COVID-19 struck in 2019, the business collapsed with dried-up sales and stuck payments."
+          },
+          {
+            "heading": "Turning Crisis into Opportunity",
+            "content": "By 2021, during the second pandemic wave, demand for immunity boosters and traditional products like camphor, guggal, and loban surged. Poonam researched camphor manufacturing via YouTube and presented the idea to her husband. Together, they pooled resources and established Gaurishankar Industries, launching Siddhi Aarti Kapoor in March 2023."
+          },
+          {
+            "heading": "Finding the Right Support",
+            "content": "Production began, but Poonam faced challenges selling without proper branding or trademark knowledge. Six months into the venture, she met Manoj Tiwari, a mentor from Jagriti's Udyam program, who introduced her to enterprise expert Sahana. In September 2023, Poonam joined Jagriti's cohort, receiving support for trademark registration, online marketplace connections, digital accounting training, and financial assistance."
+          },
+          {
+            "heading": "Growing Success",
+            "content": "\"My camphor business is growing rapidly. I'm now making camphor in different sizes, and it's in high demand in Gorakhpur, Deoria, and Kushinagar districts.\" What started as a desperate attempt to save her family during crisis has now become a thriving business that proves a homemaker's potential knows no bounds."
+          }
+        ]
+      },
+      "quote": "My camphor business is growing rapidly. I'm now making camphor in different sizes, and it's in high demand in Gorakhpur, Deoria, and Kushinagar districts.",
+      "stats": [
+        { "label": "Years as Homemaker", "value": "15" },
+        { "label": "Business Launch", "value": "Mar 2023" },
+        { "label": "Districts Served", "value": "3" },
+        { "label": "Joined Jagriti", "value": "Sep 2023" }
+      ],
+      "achievements": [
+        "Launched Gaurishankar Industries during pandemic",
+        "Created Siddhi Aarti Kapoor brand",
+        "Secured trademark registration through Jagriti",
+        "Products in high demand across three districts",
+        "Connected to online marketplace"
+      ]
     },
     {
       "id": "deepika-singh",
       "slug": "deepika-singh",
       "name": "Deepika Singh",
       "company": "Atrangi Kalakari",
-      "image": "/images/udyamis/deepika.png",
-      "shortDescription": "Artist turned terracotta jewelry entrepreneur employing 30 women",
-      "fullStory": "Deepika Singh's passion for painting led her from exhibiting at Raj Bhawan in Lucknow to establishing Atrangi Kalakari. After participating in Jagriti Yatra in 2022, she learned terracotta craftsmanship and now creates handcrafted jewelry combining artistic elegance with traditional clay work.",
-      "achievements": [
-        "Employs 30 women artisans earning ₹5,000-₹10,000 monthly",
-        "Sells across India (Mumbai, Gujarat) and internationally",
-        "Product range includes terracotta jewelry, keychains, gift items",
-        "Featured at prestigious Raj Bhawan exhibition in Lucknow"
+      "tagline": "The Colors of Persistence",
+      "image": "/images/udyamis/deepika-singh/main.png",
+      "cardImage": "/images/udyamis/deepika.png",
+      "gallery": [
+        "/images/udyamis/deepika-singh/gallery-1.png",
+        "/images/udyamis/deepika-singh/gallery-2.png",
+        "/images/udyamis/deepika-singh/gallery-3.png"
       ],
-      "quote": "Terracotta? It's just clay, it'll break - shopkeepers initially said, but Deepika overcame market skepticism.",
-      "location": "Gorakhpur, Uttar Pradesh"
+      "location": "Gorakhpur, Uttar Pradesh",
+      "category": "Handicrafts",
+      "shortDescription": "Artist turned entrepreneur employing 30 women artisans, creating terracotta jewelry sold across India and internationally.",
+      "story": {
+        "title": "The Colors of Persistence: A Brush with Destiny",
+        "sections": [
+          {
+            "heading": null,
+            "content": "Deepika Singh, hailing from the quaint streets of Medical College Road, Gorakhpur, had a love for painting that filled her soul and her home. From capturing scenes she saw in passing to creating beautiful canvases, her shelves were brimming with colors instead of clothes. This wasn't just a hobby; it was a calling. Despite a master's degree and formal education in Bombay Art, her artistic passion remained a personal joy. But sometimes, passion finds a path, and for Deepika, this path became a venture that would soon transform lives."
+          },
+          {
+            "heading": "A Life Partner's Vision",
+            "content": "Raised in the heart of Basaratpur, Gorakhpur, Deepika married Shivaji Rai in 2021. Even after her marriage, Deepika's love for painting thrived. Her husband, noticing her talent and drive, encouraged her to turn her passion into a career. With his support, she began showcasing her work at government exhibitions, including the prestigious Raj Bhawan in Lucknow. Her art was admired everywhere, but Deepika knew she needed more guidance to transform her creativity into entrepreneurship. That's when fate introduced her to Jagriti's Udyam Corp Preeti. In 2022, she embarked on the life-changing Jagriti Yatra."
+          },
+          {
+            "heading": "Crafting A Future with Clay",
+            "content": "After returning from the Jagriti Yatra, Deepika was brimming with entrepreneurial knowledge and ready to take the plunge. At a NABARD exhibition in Gorakhpur's Jubilee Inter College, her artwork caught the attention of Commissioner Ravi Kumar NG. He suggested she explore terracotta jewelry, promising support under the ODOP (One District One Product) initiative. Inspired and determined, Deepika began learning the craft of terracotta jewelry from local artisans and through online resources. Soon, her pieces were as elegant as the paintings she had always adored."
+          },
+          {
+            "heading": "Women Rising Together",
+            "content": "With her flourishing venture, Atrangi Kalakari, Deepika became more than an artist. She became a mentor and provider for 30 women who now work with her. These women earn between ₹5,000 to ₹10,000 per month, and their handcrafted jewelry, keychains, and gift items are sold in cities across India, including Mumbai and Gujarat, and even abroad. Deepika's dream now is to take her business online, for which she is working hard on completing the necessary GST paperwork."
+          },
+          {
+            "heading": "Shattering Myths, Building Trust",
+            "content": "As Deepika reflects on her journey from the modest streets of Gorakhpur to building her brand, there are moments where she pauses. It wasn't financial struggles that tested her, but the skepticism of the market. \"Terracotta? It's just clay, it'll break,\" many shopkeepers would say. But Deepika, armed with resilience, convinced them to take just a few pieces. As trust grew, so did her production. Her unwavering belief in her craft proved that dedication and passion could overcome even the hardest challenges."
+          },
+          {
+            "heading": "The Art of Transformation",
+            "content": "Deepika's story is a vibrant canvas painted with the colors of persistence, where creativity and hard work blend to create a brighter future for herself and the community she supports. Her handcrafted terracotta jewelry now crosses borders, yet she remains rooted in her Gorakhpur beginnings, a humble artist at heart. Backed by Jagriti's support, Deepika's journey is a testament to what happens when true passion meets real purpose — even the most fragile clay can be molded into something enduring and beautiful."
+          }
+        ]
+      },
+      "quote": "Even the most fragile clay can be molded into something enduring and beautiful.",
+      "stats": [
+        { "label": "Women Employed", "value": "30" },
+        { "label": "Monthly Earnings", "value": "₹5-10K" },
+        { "label": "Marriage Year", "value": "2021" },
+        { "label": "Jagriti Yatra", "value": "2022" }
+      ],
+      "achievements": [
+        "Employs 30 women artisans",
+        "Products sold in Mumbai, Gujarat, and internationally",
+        "Featured at Raj Bhawan, Lucknow",
+        "Recognition at NABARD exhibition",
+        "ODOP initiative support",
+        "Master's degree in Bombay Art"
+      ]
     },
     {
       "id": "kiran-sharma",
       "slug": "kiran-sharma",
       "name": "Kiran Sharma",
       "company": "Matri Shakti Moonj Craft",
-      "image": "/images/udyamis/kiran-sharma.png",
-      "shortDescription": "From childhood skill to leading 15 women artisans in moonj craft",
-      "fullStory": "Married at 17, mother of seven children, Kiran recalled her childhood skill of weaving munj grass baskets. In 2017, she met Jagriti team who connected her to Tech Shakti digital training. Today she leads 15 women artisans creating bread boxes, wall plates, bags, baskets, and gift items sold in Delhi, Mumbai, and UK.",
-      "achievements": [
-        "Leads 15 women artisans",
-        "Earns ₹15,000-₹20,000 monthly",
-        "Products sold in Delhi, Mumbai, and UK",
-        "Gifted a handcrafted Ram figure to CM Yogi Adityanath"
+      "tagline": "A Weaver of Dreams",
+      "image": "/images/udyamis/kiran-sharma/main.png",
+      "cardImage": "/images/udyamis/kiran-sharma.png",
+      "gallery": [
+        "/images/udyamis/kiran-sharma/gallery-1.png",
+        "/images/udyamis/kiran-sharma/gallery-2.png",
+        "/images/udyamis/kiran-sharma/gallery-3.png",
+        "/images/udyamis/kiran-sharma/gallery-4.png",
+        "/images/udyamis/kiran-sharma/gallery-5.png",
+        "/images/udyamis/kiran-sharma/gallery-6.png"
       ],
-      "quote": "Never lose hope. If you have passion, helping hands will find their way. Keep your courage intact, and success will be yours.",
-      "location": "Behradabar village, Uttar Pradesh"
+      "location": "Behradabar Village, Uttar Pradesh",
+      "category": "Handicrafts",
+      "shortDescription": "Mother of 7 who turned childhood moonj weaving skill into an international business, leading 15 women artisans with products reaching UK.",
+      "story": {
+        "title": "A Weaver of Dreams: The Craft That Sparked a Global Journey",
+        "sections": [
+          {
+            "heading": null,
+            "content": "The very craft that Kiran was once scolded for learning as a child has now taken her far beyond her village, making her a symbol of perseverance and artistry. Today, her handcrafted pieces, made from munj grass, are not only recognized in India but have found admirers abroad. Even Anar Patel, daughter of the Governor of Uttar Pradesh, Anandiben Patel, expressed interest in learning munj crafts from her. Recently, Kiran had the honor of gifting a handcrafted figure of Lord Ram to Chief Minister Yogi Adityanath. Alongside other women from her village, she creates stunning munj-based items like bread boxes, wall plates, bags, bird nests, laundry boxes, fruit baskets, book covers, coasters, and gift boxes. These products are sold in metropolitan cities across India and even reach markets in the UK through online and offline platforms."
+          },
+          {
+            "heading": "Into The Whirlwinds",
+            "content": "Kiran hails from the village of Behradabar, but her roots lie in her maternal village, Bagha Cheri, in Bhaluani Block. She recalls, \"I was pursuing my studies when my parents arranged my marriage in 2001, at the age of 17. Two years later, in 2003, my daughter was born, and my family continued to grow. I now have seven children, four sons and three daughters. The weight of providing for them and ensuring their education consumed me, especially since my husband, Radha Krishna Sharma, a carpenter by profession, didn't take his responsibilities seriously. For years, I asked him for financial support, but he always evaded the conversation. Fourteen years slipped away like this.\""
+          },
+          {
+            "heading": null,
+            "content": "Despite her hardships, Kiran's biggest concern was the future of her daughters and the cost of their eventual marriages. It was during this period of worry that a long-forgotten skill came to her mind – the art of munj weaving, something she had learned from her mother and sisters. She went to the riverbank, gathered the raw material, and started crafting baskets. But the demand for her products was nonexistent, leaving her disheartened. The biggest obstacle she faced was capital. Without resources, how could she scale her work?"
+          },
+          {
+            "heading": "Jagriti: The Catalyst of Change",
+            "content": "In 2017, Kiran's life took a significant turn. She recalls meeting Suvarna, the project head, who introduced her to the team – Manoj and Preeti. They were deeply impressed by Kiran's work and helped connect her with Tech Shakti, a digital empowerment initiative. They trained her in the finer details of digital platforms, enabling her to explore new designs on Google and YouTube."
+          },
+          {
+            "heading": null,
+            "content": "With guidance from Jagriti, Kiran began her new journey, starting small with just two women from her village. Together, they crafted various products like bread boxes, wall plates, bags, bird nests, laundry boxes, fruit baskets, book covers, coasters, and gift boxes. As Jagriti's mentorship continued, her work expanded, and so did her team. Today, she leads a group of 15 women, earning between ₹15,000 and ₹20,000 a month. The other women earn around ₹4,000 to ₹5,000 per month."
+          },
+          {
+            "heading": null,
+            "content": "Her products now reach metropolitan cities like Delhi and Mumbai, and even the UK, through postal, courier, and bus services. Payments are seamlessly transferred online to her bank account. \"I had lost hope,\" Kiran admits. \"I thought nobody in today's world would appreciate handmade munj crafts. But Jagriti awakened the skill within me, playing the role of Jambavan in my life, rekindling my spirit and showing me that I could do it.\""
+          },
+          {
+            "heading": "Never Say Never",
+            "content": "\"Never lose hope,\" Kiran says with conviction. \"No matter how difficult the circumstances, one should never give up. If you have the passion to achieve something, helping hands will find their way to you. Keep your courage intact, and success will one day be yours.\""
+          },
+          {
+            "heading": null,
+            "content": "Kiran often reflects on a memory from her childhood—when she would watch her grandmother weave munj baskets. As a young girl, she too tried her hand at it, only to have her father snatch the basket away and throw it into the pond, telling her to focus on her studies instead. \"The time you waste weaving baskets,\" he'd say, \"would be better spent on your education. It will help you more in the future.\" Little did he know that very skill would one day shine not just in India, but across the globe."
+          }
+        ]
+      },
+      "quote": "Never lose hope. No matter how difficult the circumstances, one should never give up. If you have the passion to achieve something, helping hands will find their way to you.",
+      "stats": [
+        { "label": "Children", "value": "7" },
+        { "label": "Women Led", "value": "15" },
+        { "label": "Monthly Earnings", "value": "₹15-20K" },
+        { "label": "Team Earnings", "value": "₹4-5K" },
+        { "label": "Started with Jagriti", "value": "2017" }
+      ],
+      "achievements": [
+        "Gifted handcrafted Ram figure to CM Yogi Adityanath",
+        "Products exported to UK",
+        "Leads 15 women artisans",
+        "Interest from Governor's daughter Anar Patel",
+        "Products sold in Delhi, Mumbai, and UK",
+        "Connected to Tech Shakti digital initiative"
+      ]
     }
   ]
 }

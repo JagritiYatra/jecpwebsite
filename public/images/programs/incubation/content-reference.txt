@@ -1,0 +1,95 @@
+INCUBATION OVERVIEW PAGE - EXACT CONTENT
+==========================================
+
+PAGE TITLE: Overview
+URL: https://jecp.in/overview/
+
+HERO BANNER: /images/about/innerpgbanner.png (grayscale banyan tree)
+
+---
+
+SECTIONS:
+
+1. OVERVIEW
+2. DATA DASHBOARD
+3. MESSAGE FROM THE INCUBATION DIRECTOR
+4. INCUBATION PROCESS
+5. WHO ARE OUR UDYAMIS
+6. UDYAMI JOURNEY ROADMAP
+7. SECTORS IN FOCUS
+8. INCUBATED ENTERPRISES
+9. INCUBATION FACILITIES
+10. MILESTONES AND KEY EVENTS
+11. OUR CLIENTS
+12. INCUBATION PROGRAMS AND WORKSHOPS
+
+---
+
+DATA DASHBOARD STATISTICS:
+- Enterprises Incubated: 0+
+- Livelihoods Impacted: ~0K
+- Jobs Created: 0
+- Revenue Generated: ~₹0 Cr
+- Industry Mentors: 0
+
+---
+
+DIRECTOR'S MESSAGE:
+Quote: "In Deoria, the JECP Rural Incubation Center stands as a beacon of hope. We offer vital resources, expert mentorship, and unwavering support to empower entrepreneurs."
+
+---
+
+UDYAMI CATEGORIES (L0-L3):
+- L0: First-Time Entrepreneurs
+- L1: Entrepreneurs scaling to ₹50 Lakhs
+- L2: Entrepreneurs scaling to ₹2 Crore
+- L3: High-Growth entrepreneurs above ₹5 crore
+
+---
+
+INCUBATION PROCESS STAGES:
+1. Mobilization (2-3 months)
+2. Application Window (1 month)
+3. Evaluation & Selection (1 month)
+4. Cohort Kick-Off (3 days)
+5. Needs Assessment (1-2 months)
+
+---
+
+SUPPORT SERVICES:
+- Incubation Programs
+- Training & Capacity Building
+- JECP Membership
+- Co-Working Spaces
+- Business Support Services
+
+---
+
+KEY EVENTS:
+- High-Intensity Support (Months 2-4)
+- Monthly Meetups
+- Product/Service Demo Days
+- Investor Demo Day
+- Graduation Ceremony
+
+---
+
+SECTORS IN FOCUS:
+- Handicrafts and Apparel
+- Women
+- Healthcare
+- Agro-Processing
+- Digital Innovation
+
+---
+
+CTA BUTTON: "Apply for Incubation"
+
+---
+
+DESIGN NOTES:
+- Navy blue sections alternating with cream/white
+- Dashboard with statistics cards
+- Timeline/process flow visualization
+- Sector icons/cards
+- Director photo with quote block

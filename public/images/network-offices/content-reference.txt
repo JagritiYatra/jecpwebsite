@@ -1,0 +1,110 @@
+NETWORK OFFICES PAGE - EXACT CONTENT
+=====================================
+
+PAGE TITLE: JECP Network Offices
+
+HERO BANNER: /images/about/innerpgbanner.png (grayscale banyan tree)
+
+---
+
+LAYOUT: 7 Navy Blue Cards (4 on top row, 3 on bottom row)
+
+---
+
+CARD 1: DEORIA
+--------------
+Title (Orange): DEORIA
+
+Address (Orange label):
+Address:
+Jagriti Enterprise Centre-Purvanchal, Vill-Araipar, Post-Barpar, Dist-Deoria, U.P.-274201
+
+Google Map Location (Orange link):
+https://share.google/9V0tQ3G9bpeBsTfzd
+
+---
+
+CARD 2: KUSHINAGAR
+------------------
+Title (Orange): KUSHINAGAR
+
+Address (Orange label):
+Address:
+Jagriti Udyam Kendra, Maharana Pratap Chowk, Agency Road SEWARHI, Tamkuhi Road, Kushinagar, UP 274406
+
+Google Map Location (Orange link):
+https://share.google/DFxxRJHvY2c4m5m0s
+
+---
+
+CARD 3: GORAKHPUR
+-----------------
+Title (Orange): GORAKHPUR
+
+Address (Orange label):
+Address:
+Jagriti Network Office, Near Sport college Behind Big Bachat Bazar, Ramjanki Nagar Gorakhpur, Uttar Pradesh 273004
+
+Google Map Location (Orange link):
+(same as Kushinagar or separate link)
+
+---
+
+CARD 4: BALLIA
+--------------
+Title (Orange): BALLIA
+
+Address (Orange label):
+Address:
+Near T.D. College Chauraha, between Rudra and Axis Bank, Above Sai Cyber Café, 1st Floor, 277001
+
+Google Map Location (Orange link):
+https://share.google/mgdbrhmWPz8Pskz9L
+
+---
+
+CARD 5: MAU
+-----------
+Title (Orange): MAU
+
+Address (Orange label):
+Address:
+Jagriti Udyam Kendra, H.No-15/2-A,Kalpanath Nagar Bakawal,Beside Saraiyiakhansi Police Station, Mau- 275101
+
+Google Map Location (Orange link):
+https://share.google/Bt49Hj5RiPMxOBhEw
+
+---
+
+CARD 6: SANT KABIR NAGAR
+------------------------
+Title (Orange): SANT KABIR NAGAR
+
+Address (Orange label):
+Address:
+Jagriti Enterprise Centre – Purvanchal, Near Harikunj Marriage Hall, Mehandawal Bypass, Khalilabad, Mohaddipur, Uttar Pradesh 272175
+
+Google Map Location (Orange link):
+https://share.google/3Dx5h6DyhwCHqojNa
+
+---
+
+CARD 7: MAHARAJGANJ
+-------------------
+Title (Orange): MAHARAJGANJ
+
+Address (Orange label):
+Address:
+Jagriti Entrprise Centre Maharajganj, Jaiprakash Nagar, Gorakhpur Road, Nagarpalika, Ward No. 7, Near city Montessori School, PIN code: 273303
+
+Google Map Location (Orange link):
+https://share.google/uqZ5PyzuGvttvrRMT
+
+---
+
+DESIGN NOTES:
+- Navy blue card backgrounds
+- Orange text for titles and "Address:" / "Google Map Location:" labels
+- White text for address content
+- Orange links for Google Maps
+- Cards arranged in grid: 4 columns on desktop, responsive on mobile

@@ -1,0 +1,82 @@
+OUR FACILITIES PAGE - EXACT CONTENT
+====================================
+
+PAGE TITLE: Our Facilities
+
+HERO BANNER: /images/about/innerpgbanner.png (grayscale banyan tree)
+
+---
+
+SECTION 1: Main Content (Navy Blue Background)
+----------------------------------------------
+HEADING: JECP Deoria
+
+SUB-HEADING (Orange): A Fully Equipped Modern Hub for Every Occasion
+
+PARAGRAPH:
+JECP Deoria stands as a thoughtfully crafted, state-of-the-art space that seamlessly adapts to a spectrum of needs - be it community celebrations, cultural exchanges, or professional engagements. It embodies a rare balance of functionality and comfort, creating an environment where purpose meets possibility, and every gathering finds its ideal home.
+
+---
+
+ACCORDION SECTIONS (Expandable):
+--------------------------------
+1. Versatile Event Spaces
+   • Multi-Purpose Hall: 300-seater venue for community events, conferences, and large gatherings
+   • Conference Room: 12-seater space with LED screens and high-speed Wi-Fi
+   • Co-Working Spaces: Five modern, state-of-the-art 3-seater office spaces
+
+2. Elite Hospitality and Comfort
+   • Reception Area
+   • VIP Green Room/Guest Waiting Room
+   • Healing & Meditation Zone
+   • Housekeeping Services
+   • 24×7 Security
+
+3. Advanced Technology and Infrastructure
+   • Dedicated AV and IT Support (casting screens, projectors, microphones, speakers, stage lighting, podium setups)
+   • Media Gallery Space
+   • Printing Facility
+   • 24×7 Power Backup
+
+4. Accessibility and Comfort
+   • Large Parking Area
+   • Handicap-Friendly Washrooms
+   • Water Cooler with RO
+   • Green Patch Walking Area
+   • First Aid
+
+5. Local Support & Services
+   • Vendor Support for catering, decor, fabrication, and transportation
+
+---
+
+BUTTON: View Our Facilities
+LINK: Opens PDF - /images/facilities/rural-immersion-program.pdf
+
+---
+
+SECTION 2: Image Gallery/Scroller (White Background)
+----------------------------------------------------
+CAROUSEL with 7-8 facility images showing:
+- Co-working spaces
+- Conference rooms
+- Multi-purpose hall
+- AV equipment
+- Other facility photos
+
+IMAGES:
+1. /images/facilities/facility-1.png
+2. /images/facilities/facility-2.png
+3. /images/facilities/facility-3.png
+4. /images/facilities/facility-4.png
+5. /images/facilities/facility-5.png
+6. /images/facilities/facility-6.png
+7. /images/facilities/facility-7.png
+8. /images/facilities/facility-8.png
+9. /images/facilities/conference-room.png
+10. /images/facilities/coworking-spaces.png
+
+---
+
+PDF DOWNLOADED:
+/images/facilities/rural-immersion-program.pdf

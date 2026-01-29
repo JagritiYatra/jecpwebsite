@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
 
 const testimonials = [
   {
@@ -35,105 +34,53 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
   return (
-    <section className="py-16 px-4 bg-[var(--background-cream)]">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-10 md:py-12 px-4 bg-[var(--background-cream)]">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-dark)] mb-3">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-navy)] mb-3">
             Wisdom That Guides Us
           </h2>
           <p className="text-gray-600">Here&apos;s What Our Clients Say</p>
         </div>
 
-        {/* Testimonial Carousel */}
-        <div className="relative">
-          <div className="overflow-hidden">
+        {/* Cards Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {testimonials.map((testimonial, index) => (
             <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              key={index}
+              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col"
             >
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="w-full flex-shrink-0 px-4"
-                >
-                  <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-3xl mx-auto">
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                      {/* Image */}
-                      <div className="flex-shrink-0">
-                        <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-[var(--primary-orange)]">
-                          <Image
-                            src={testimonial.image}
-                            alt={testimonial.speaker}
-                            width={128}
-                            height={128}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-
-                      {/* Content */}
-                      <div className="text-center md:text-left">
-                        <p className="text-gray-700 text-lg italic mb-6 leading-relaxed">
-                          &ldquo;{testimonial.quote}&rdquo;
-                        </p>
-                        <h4 className="font-bold text-[var(--primary-navy)] text-lg">
-                          {testimonial.speaker}
-                        </h4>
-                        <p className="text-[var(--primary-orange)] text-sm">
-                          {testimonial.title}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+              {/* Image */}
+              <div className="flex justify-center mb-4">
+                <div className="w-20 h-20 rounded-full overflow-hidden border-3 border-[var(--primary-orange)] shadow-md">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.speaker}
+                    width={80}
+                    height={80}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              ))}
+              </div>
+
+              {/* Quote */}
+              <p className="text-gray-600 text-sm italic leading-relaxed text-center flex-1 mb-4">
+                &ldquo;{testimonial.quote}&rdquo;
+              </p>
+
+              {/* Name & Title */}
+              <div className="text-center border-t border-gray-100 pt-4">
+                <h4 className="font-bold text-[var(--primary-navy)] text-sm">
+                  {testimonial.speaker}
+                </h4>
+                <p className="text-[var(--primary-orange)] text-xs mt-1">
+                  {testimonial.title}
+                </p>
+              </div>
             </div>
-          </div>
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[var(--primary-navy)] hover:bg-[var(--primary-navy)] hover:text-white transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[var(--primary-navy)] hover:bg-[var(--primary-navy)] hover:text-white transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          {/* Dots */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  index === currentIndex
-                    ? 'bg-[var(--primary-orange)] w-8'
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-              />
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>

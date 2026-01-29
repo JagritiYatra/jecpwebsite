@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand Colors */
-  --primary-navy: #1e3a5f;
-  --primary-navy-dark: #152a45;
-  --primary-orange: #e07c3a;
-  --primary-orange-hover: #c96a2d;
+  /* Jagriti Brand Colors */
+  --primary-navy: #4a4580;
+  --primary-navy-dark: #3d3a6d;
+  --primary-navy-light: #5c5792;
+  --primary-orange: #e8954f;
+  --primary-orange-hover: #d4843e;
+  --primary-orange-light: #f0a565;
   --background-cream: #f5f0eb;
   --background-white: #ffffff;
   --text-dark: #1a1a2e;
@@ -86,4 +88,96 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--primary-navy);
   border-radius: 4px;
+}
+
+/* Extra small breakpoint utilities (xs: 480px) */
+@media (min-width: 480px) {
+  .xs\:text-xs { font-size: 0.75rem; line-height: 1rem; }
+  .xs\:text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+  .xs\:text-base { font-size: 1rem; line-height: 1.5rem; }
+  .xs\:text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+  .xs\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+  .xs\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+  .xs\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+}
+
+/* Responsive hero height utilities */
+.h-dvh {
+  height: 100vh;
+  height: 100dvh;
+}
+
+.min-h-dvh {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent content from being hidden behind fixed headers on mobile */
+@media (max-width: 640px) {
+  .content-safe {
+    padding-top: max(env(safe-area-inset-top), 16px);
+  }
+}
+
+/* Infinite scroll animations for News Gallery */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
+}
+
+.animate-scroll-left:hover,
+.animate-scroll-right:hover {
+  animation-play-state: paused;
+}
+
+/* Fade in animation for hover preview */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out forwards;
 }

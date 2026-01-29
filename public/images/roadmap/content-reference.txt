@@ -1,0 +1,100 @@
+FUTURE ROADMAP PAGE - CONTENT REFERENCE
+========================================
+
+PAGE TITLE: Future Roadmap
+
+HERO SECTION:
+- Banner image: /images/about/innerpgbanner.png (already have)
+
+---
+
+SECTION 1: The Road Ahead
+Title: The Road Ahead
+Subtitle: Building Naya Bharat through Enterprise - A Vision for Impact
+
+Content:
+Jagriti Enterprise Centre – Purvanchal (JECP) is driving a grassroots movement to shape Naya Bharat, aiming to reach 30 million people through enterprise-led development inspired by the Banyan Revolution and guided by the Chaar Dhaam framework.
+
+---
+
+SECTION 2: Creating a Transformative Ecosystem
+Title: Creating a Transformative Ecosystem
+
+Content:
+Four regional hubs in Deoria, Nagpur, Kanyakumari, and Ganjam will anchor a 15-district incubation network, nurturing local businesses, creating jobs, and strengthening regional economies.
+
+---
+
+SECTION 3: Powered by People
+Title: Powered by People
+
+Content:
+JECP draws strength from 7,500+ Jagriti alumni, many of whom will lead local franchise models in 240 districts as part of JADE (Jagriti Ambassadors for District Entrepreneurship).
+
+---
+
+SECTION 4: The Middle of Diamond Institute
+Title: The Middle of Diamond Institute
+
+Content:
+A knowledge and policy hub based in Mumbai will translate grassroots insights into national policy, emphasizing human-centric, culturally rooted entrepreneurship.
+
+---
+
+SECTION 5: A Digital Bridge for Bharat
+Title: A Digital Bridge for Bharat
+
+Content:
+A vernacular digital platform will connect entrepreneurs to markets, mentors, and funding.
+
+---
+
+SECTION 6: By 2032 Vision
+Title: By 2032
+
+Content:
+JECP envisions transforming Middle India – touching 100 million lives, enabling 1 million entrepreneurs, and generating 5 million jobs.
+
+Key Stats:
+- 100 million lives touched
+- 1 million entrepreneurs enabled
+- 5 million jobs generated
+
+---
+
+SECTION 7: Chaar Dham Model (Map Section)
+Title: Chaar Dham Model
+Subtitle: Four strategic hubs anchor a vast network of innovation across regions.
+
+Image: /images/roadmap/chaar-dham-map.png
+
+---
+
+SECTION 8: National Udyamita Movement
+Title: National Udyamita Movement
+Subtitle: Impacting 240 districts with 470 million population
+
+Four Jagriti Enterprise Centres:
+
+1. Deoria (Uttar Pradesh)
+   - 15 districts
+   - 50 Million People
+
+2. Ganjam (Odisha)
+   - 15 districts
+   - 22 Million People
+
+3. Nagpur (Maharashtra)
+   - 15 districts
+   - 26 Million People
+
+4. Kanyakumari (Tamil Nadu)
+   - 15 districts
+   - 26 Million People
+
+---
+
+IMAGES DOWNLOADED:
+1. /images/roadmap/chaar-dham-map.png - Chaar Dham India map with 4 locations marked
+2. /images/roadmap/jagriti-bg.png - Background image
+3. /images/about/innerpgbanner.png - Hero banner (already exists)

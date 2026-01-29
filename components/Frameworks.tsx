@@ -7,48 +7,53 @@ const frameworks = [
     name: 'JECP 3xI (2E) Framework',
     description:
       "JECP's 3xI framework is a beacon of transformation, centering on Incubation, Innovation, and Inspiration, all rooted in sustainability.",
-    image: '/images/frameworks/3xi-framework.png',
+    image: '/images/frameworks/3xi-framework-hd.png',
   },
   {
     name: 'JECP 7M Framework',
     description:
-      'The 7M framework works a lighthouse for Udyamis, guiding them through Mobilization, Mentorship, Market Connect, Money, Miscellaneous Services, Mahol (creating an inspiring environment), and Mitra (partners with complementary skills).',
-    image: '/images/frameworks/7m-framework.png',
+      'The 7M framework works as a lighthouse for Udyamis, guiding them through Mobilization, Mentorship, Market Connect, Money, Miscellaneous Services, Mahol (creating an inspiring environment), and Mitra (partners with complementary skills).',
+    image: '/images/frameworks/7m-framework-hd.png',
   },
 ];
 
 export default function Frameworks() {
   return (
-    <section className="py-16 relative overflow-hidden">
-      {/* Background with tree image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: 'url(/images/footer/footer-bg.png)' }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/90" />
-
-      <div className="relative max-w-7xl mx-auto px-4">
+    <section className="py-10 md:py-12 bg-[var(--background-cream)]">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--text-dark)] mb-12">
-          Our Udyamita Frameworks
-        </h2>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-navy)] mb-3">
+            Our Udyamita Frameworks
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Structured approaches that empower rural entrepreneurs to build sustainable enterprises
+          </p>
+        </div>
 
         {/* Framework Cards */}
         <div className="grid md:grid-cols-2 gap-8">
           {frameworks.map((framework, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-[var(--primary-orange)]"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden border-t-4 border-[var(--primary-orange)] hover:shadow-2xl transition-shadow duration-300"
             >
-              <div className="relative h-64 md:h-80 bg-white p-4">
-                <Image
-                  src={framework.image}
-                  alt={framework.name}
-                  fill
-                  className="object-contain p-4"
-                />
+              {/* Image Container */}
+              <div className="relative bg-gradient-to-b from-gray-50 to-white p-6">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={framework.image}
+                    alt={framework.name}
+                    fill
+                    className="object-contain"
+                    quality={100}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
               </div>
-              <div className="p-6 text-center">
+
+              {/* Content */}
+              <div className="p-6 text-center border-t border-gray-100">
                 <h3 className="text-xl font-bold text-[var(--primary-navy)] mb-3">
                   {framework.name}
                 </h3>

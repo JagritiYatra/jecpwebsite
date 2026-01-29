@@ -1,0 +1,103 @@
+OUR MENTORS PAGE - EXACT CONTENT
+==================================
+
+PAGE TITLE: Our Mentors
+URL: https://jecp.in/our-mentors/
+
+HERO BANNER: /images/about/innerpgbanner.png (grayscale banyan tree)
+
+---
+
+SECTION HEADING: Our Mentors
+
+---
+
+ALL MENTORS (20 total):
+
+1. Manish Agrawal
+   Role: Partner Leader: Capital & Infrastructure Projects, PwC CoE Urbanization, JEC-P
+   Image: /images/mentors/Manish-Aggarwal.png
+
+2. Prashant Iyer
+   Role: Director: Ecosystem Development, Wadhwani Foundation Strategic Leader in Startup & SMB Growth
+   Image: /images/mentors/Prashant-Iyer.png
+
+3. Lalith Kumar Vemali
+   Role: Founding Member, Head of Product Innovation & Customer Experience, SSK EMart (Kirana Commerce Innovation)
+   Image: /images/mentors/Lalit-Kumar-Vemali.png
+
+4. Dr. Debasish Mohapatra
+   Role: Associate Professor of Practice, KIIT School of Rural Management, Bhubaneswar
+   Image: /images/mentors/Debashish-M.png
+
+5. Pooja Tendulkar
+   Role: Business Coach Founder, Leminion Green Solution Pvt. Ltd.
+   Image: /images/mentors/Pooja-Tendulkar.png
+
+6. Sandeep Achantani
+   Role: CEO Africa Region, Innovis Telecom Services Pvt. Ltd. Entrepreneur
+   Image: /images/mentors/Sandeep-Achantani.png
+
+7. Ashish Kolarkar
+   Role: Head of Operations, Madhya Pradesh, Haselfre Foundation Founder & CEO, DATATRACK
+   Image: /images/mentors/Ashish-Kolarkar.png
+
+8. Sushank Arora
+   Role: Founder & CEO, Nyra Kitchenware
+   Image: /images/mentors/Sushank-Arora.png
+
+9. Sachin Kumar
+   Role: Co-Founder, Qtopia Ex-Product Head, PagarBook
+   Image: /images/mentors/Sachin-Kumar.png
+
+10. Umesh Kumar
+    Role: Head of Product, India, Branch International
+    Image: /images/mentors/Umesh-Kumar.png
+
+11. Apurva Mehra
+    Role: Senior Product Manager, Microsoft
+    Image: /images/mentors/Apurv-Mehra.png
+
+12. Md Nashim Akhtar
+    Role: Program Lead, Log 9 Materials
+    Image: /images/mentors/Md.-Nasim-Akhtar.png
+
+13. Ankur Shrivastava
+    Role: Co-Founder, Qitech.in | QiMedia.in Mentor, Digiplus Academy
+    Image: /images/mentors/Ankur-Srivastava.png
+
+14. Iranna Rotte
+    Role: HO Rural Entrepreneurial Development, KrishiKalpa Foundation Advisory Board Member, Project Baala & SEED
+    Image: /images/mentors/Iranna-Rotte.png
+
+15. Satyanarayana G
+    Role: AVP: Growth & Marketing Mentor, Institute of Product Leadership
+    Image: /images/mentors/Satyanarayan-G.png
+
+16. Rajesh Kachroo
+    Role: Business Head – University Relations, TeamLease Edtech
+    Image: /images/mentors/Rajesh-Kachroo.png
+
+17. Harsh Diwedi
+    Role: Mentor at Multiple Start-ups & Empaneled Mentor with StartInUp Initiative
+    Image: /images/mentors/test-1.jpg
+
+18. Abhishek Sonavane
+    Role: Research Scholar, IIM Lucknow
+    Image: /images/mentors/Abhishek-Sonawane.png
+
+19. Ravish Vasan
+    Role: Founder, Sattvam (Agri Startup) Career Coach, Career Design Hub
+    Image: /images/mentors/Ravish-Vasan.png
+
+20. Devang Patel
+    Role: Founder, Vantage Point Executive Performance Coaching Mentor, CII Centre for Innovation and Entrepreneurship Studies
+    Image: /images/mentors/Devang-Patel.png
+
+---
+
+DESIGN NOTES:
+- Grid layout with mentor cards
+- Each card has photo, name, and role
+- Navy blue and orange accents
+- Circular or rounded square photos

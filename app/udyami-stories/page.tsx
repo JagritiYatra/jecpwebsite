@@ -224,15 +224,17 @@ export default function UdyamiStoriesPage() {
             transform your vision into reality. Join our community of changemakers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/get-involved/apply"
+            <a
+              href="https://mis.jecp.in/apply"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-[var(--primary-orange)] text-white font-semibold rounded-lg hover:bg-[var(--primary-orange-hover)] transition-colors inline-flex items-center justify-center gap-2"
             >
-              Start Your Journey
+              Apply for Incubation
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </Link>
+            </a>
             <Link
               href="/contact"
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[var(--primary-navy)] transition-colors"

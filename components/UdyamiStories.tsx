@@ -60,10 +60,10 @@ export default function UdyamiStories() {
   );
 
   return (
-    <section className="py-16 px-4 bg-[var(--background-cream)]">
+    <section className="py-10 md:py-12 px-4 bg-[var(--background-cream)]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-12">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-8">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
               Our Udyami<br />Stories

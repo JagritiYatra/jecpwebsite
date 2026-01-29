@@ -297,12 +297,14 @@ export default async function UdyamiStoryPage({ params }: PageProps) {
             Join JECP and transform your dreams into reality with our support and mentorship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/get-involved/apply"
+            <a
+              href="https://mis.jecp.in/apply"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-[var(--primary-orange)] text-white font-semibold rounded-lg hover:bg-[var(--primary-orange-hover)] transition-colors"
             >
-              Apply Now
-            </Link>
+              Apply for Incubation
+            </a>
             <Link
               href="/udyami-stories"
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[var(--primary-navy)] transition-colors"

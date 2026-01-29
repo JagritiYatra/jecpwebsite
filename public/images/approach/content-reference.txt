@@ -1,0 +1,79 @@
+OUR APPROACH PAGE - EXACT CONTENT
+==================================
+
+PAGE TITLE: Our Approach
+
+HERO BANNER: /images/about/innerpgbanner.png (grayscale banyan tree)
+
+---
+
+SECTION 1: Middle of Diamond India Theory (White Background)
+------------------------------------------------------------
+IMAGE (LEFT): /images/approach/middle-diamond.jpg (Diamond diagram with TOP/MIDDLE/BOTTOM)
+
+HEADING: Middle of Diamond India Theory
+
+PARAGRAPH 1:
+India's greatest strength lies in its people - and at the heart of it is Middle India: nearly 800 million individuals living in Tier 2 and Tier 3 districts. This is a region rich in talent, energy, and aspiration. Yet, much of it remains unseen and unsupported. These are not people lacking potential - they are people waiting to be seen, heard, and given the chance to grow.
+
+PARAGRAPH 2:
+Middle India stands at the edge of transformation. With the right exposure, tools, and opportunities, this vast population can shape the next chapter of India's progress. By nurturing their ambitions and bridging the gap between talent and opportunity, we're not just uplifting individuals - we're creating a more inclusive, purpose-driven India, powered by the dreams of millions who are ready to rise.
+
+---
+
+SECTION 2: The Udyamita Framework (Navy Blue Background)
+--------------------------------------------------------
+HEADING: The Udyamita Framework
+
+IMAGE (RIGHT): /images/approach/udyamita-framework.png (Circular diagram showing Incubation, Innovation, Inspiration with "Environmentally Sustainable" in center)
+
+LEFT SIDE:
+SUB-HEADING: 3xI (2E) Framework
+
+TEXT:
+Our 3xI (2E) framework focuses on
+Incubation, Innovation and Inspiration
+with sustainability at the core.
+
+---
+
+SECTION 3: The 7M Incubation Process (White/Cream Background)
+-------------------------------------------------------------
+IMAGE (LEFT): /images/approach/7m-process.png (Orange hexagon diagram showing: MOBILIZATION, MENTORSHIP, MARKET CONNECT, MONEY, MISC. SERVICES, MAHOL, MITRA)
+
+HEADING: The 7M Incubation Process
+
+TEXT:
+At JECP, our 7M Incubation Process nurtures grassroots entrepreneurs through a hands-on, local-first approach. We start with Mobilization, identifying potential through field networks. Mentorship and Market Connect refine strategy and unlock real revenue. Money ensures financial readiness, while Misc. Services offer support in branding, compliance, and systems. A strong Mahol of peer learning keeps energy alive, and our Mitra model grounds everything in daily execution. Together, the 7Ms create an ecosystem where no entrepreneur builds alone.
+
+---
+
+SECTION 4: Hub and Spoke Model (White Background)
+-------------------------------------------------
+IMAGE (RIGHT): /images/approach/hub-spoke.png (Orange map of Purvanchal showing districts: Siddharthnagar, Maharajganj, Basti, Sant Kabir Nagar, Kushinagar, Gorakhpur, Deoria, Azamgarh, Mau, Ballia)
+
+HEADING: Hub and Spoke Model
+
+SUB-HEADING: Scaling Impact Through a Hub-and-Spoke Model
+
+PARAGRAPH:
+Building on our presence in 4 districts, JECP is set to expand to 10 districts across Purvanchal, using a hub-and-spoke model that strengthens local ecosystems while maintaining a unified support structure.
+
+SUB-HEADING 2: District Udyam Upkendra (Entrepreneurship Centers):
+
+BULLET POINTS:
+• Dedicated physical spaces offering co-working, training, and incubation facilities
+• Anchored by local outreach teams for community engagement and support
+• Each center staffed with 1 Udyam Corps lead and 2 Udyam Mitras for grassroots implementation
+• Serves as a vibrant node for entrepreneurial activity and community gatherings
+
+PARAGRAPH 2:
+This model ensures deep local presence while staying connected to the larger Jagriti ecosystem, enabling scalable and sustainable rural enterprise development.
+
+---
+
+IMAGES DOWNLOADED:
+1. /images/approach/middle-diamond.jpg - Diamond diagram (TOP/MIDDLE/BOTTOM with stats)
+2. /images/approach/udyamita-framework.png - Circular Incubation/Innovation/Inspiration diagram
+3. /images/approach/7m-process.png - 7M hexagon process diagram
+4. /images/approach/hub-spoke.png - Purvanchal district map

@@ -1,0 +1,77 @@
+INNOVATION PAGE - EXACT CONTENT
+================================
+
+PAGE TITLE: Innovation
+URL: https://jecp.in/innovation/
+
+HERO BANNER: /images/about/innerpgbanner.png (grayscale banyan tree)
+
+---
+
+MAIN HEADING: Innovation
+
+SUBHEADING: Building Sectoral Growth through Innovation and Incubation
+
+---
+
+PRIMARY DESCRIPTION:
+JECP's Centres of Excellence (CoE) function as hubs designed to drive sector-based growth in Tier 2 and Tier 3 cities of India, with initial concentration on Eastern Uttar Pradesh. Each CoE facilitates innovation, incubation, and enterprise development while fostering sustainable growth through collaboration, research, and implementation.
+
+---
+
+VISION STATEMENT:
+"To drive incubation - and innovation - led sectoral growth through Middle India Enterprises, enabling Economic Transformation from the Grassroots."
+
+---
+
+CORE PILLARS:
+
+1. INNOVATION
+   - Innovation across Value Chains: Driving innovation through research and on-ground implementation across practices, technology, demonstrations, markets, ecosystems, and intellectual property. Metric: Number of innovations introduced.
+   - Innovation Partnerships: Building partnerships with industry and academia to co-create scalable, high-impact innovations.
+
+2. INCUBATION
+   - 7M Incubation Support: Comprehensive support for sector-specific enterprises across growth stages (L0–L3):
+     • L0: Up to ₹10 lakh annual revenue
+     • L1: ₹10–50 lakh annual revenue
+     • L2: ₹50 lakh–₹5 crore annual revenue
+     • L3: Above ₹5 crore annual revenue
+   - Focus on Women & Youth: Emphasizing women and youth as key beneficiaries and growth leaders.
+
+3. DEVELOPMENT PROGRAMS
+   - Private Sector & Philanthropy Collaboration: Implementing programs focused on sustainability and income enhancement. Metrics: Funds raised | Beneficiaries impacted.
+   - Government Partnerships: Aligning CoE objectives with national and regional growth agendas.
+
+---
+
+CENTRES OF EXCELLENCE (7 total):
+
+1. Women CoE
+   Image: /images/programs/innovation/women-coe--scaled.jpg
+
+2. Bio Regional CoE
+   Image: /images/programs/innovation/Bioregional-CoE-logo-scaled.jpg
+
+3. Digital CoE
+   Image: /images/programs/innovation/WhatsApp-Image-2025-10-11-at-4.47.45-PM2.png
+
+4. Handicraft & Apparel CoE
+   Image: /images/programs/innovation/WhatsApp-Image-2025-10-11-at-4.47.44-PM-1024x466.png
+
+5. Agro CoE
+   Image: /images/programs/innovation/WhatsApp-Image-2025-10-11-at-4.47.46-PM.png
+
+6. Healthcare CoE
+   Image: /images/programs/innovation/WhatsApp-Image-2025-10-11-at-4.47.45-PM1.png
+
+7. Rurbanization CoE
+   Image: /images/programs/innovation/WhatsApp-Image-2025-10-11-at-4.47.45-PM.png
+
+---
+
+DESIGN NOTES:
+- Navy blue sections with white text
+- Vision statement highlighted
+- Three pillars with icons
+- CoE logos in grid layout
+- Revenue tiers in colored badges

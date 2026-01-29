@@ -4,10 +4,27 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const quickMenu = [
+  { label: 'About Us', href: '/who-we-are/about-us' },
   { label: 'JECP Board', href: '/who-we-are/jecp-board' },
+  { label: 'JECP Team', href: '/who-we-are/jecp-team' },
+  { label: 'Future Roadmap', href: '/who-we-are/future-roadmap' },
+  { label: 'Our Impact', href: '/our-impact' },
   { label: 'Life@Jagriti', href: '/life-at-jagriti' },
-  { label: 'Incubation Facilities', href: '/jecp/our-facilities' },
-  { label: 'Media and Resources', href: '/media' },
+  { label: 'Media & Resources', href: '/media-resources' },
+];
+
+const programsMenu = [
+  { label: 'Incubation Overview', href: '/programs/incubation/overview' },
+  { label: 'Our Mentors', href: '/programs/incubation/our-mentors' },
+  { label: 'Our Partners', href: '/programs/incubation/our-partners' },
+  { label: 'Innovation', href: '/programs/innovation' },
+  { label: 'Inspiration', href: '/programs/inspiration' },
+];
+
+const jecpMenu = [
+  { label: 'About JECP', href: '/jecp/about-jecp' },
+  { label: 'Our Approach', href: '/jecp/our-approach' },
+  { label: 'Our Facilities', href: '/jecp/our-facilities' },
   { label: 'Network Offices', href: '/jecp/network-offices' },
 ];
 
@@ -72,30 +89,30 @@ export default function Footer() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Logo & About */}
-          <div>
+          <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Image
               src="/images/logos/jecp-logo-white.png"
               alt="JECP"
               width={180}
               height={60}
-              className="h-16 w-auto mb-6"
+              className="h-14 w-auto mb-4"
             />
-            <p className="text-gray-300 text-sm leading-relaxed mb-6">
+            <p className="text-gray-300 text-sm leading-relaxed mb-4">
               At JECP, you are at the heart of a cutting-edge incubation center dedicated to
               empowering small and medium enterprises across Tier 2 and 3 districts of India.
             </p>
 
             {/* Social Links */}
-            <div className="flex gap-3">
+            <div className="flex gap-2">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[var(--primary-orange)] transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[var(--primary-orange)] transition-colors"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -104,17 +121,50 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Menu */}
+          {/* Who We Are */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Quick Menu</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-semibold mb-4">Who We Are</h3>
+            <ul className="space-y-2">
               {quickMenu.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-[var(--primary-orange)] transition-colors flex items-center gap-2"
+                    className="text-gray-300 hover:text-[var(--primary-orange)] transition-colors text-sm"
                   >
-                    <span className="w-2 h-2 rounded-full bg-[var(--primary-orange)]" />
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* JECP */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">JECP</h3>
+            <ul className="space-y-2">
+              {jecpMenu.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-300 hover:text-[var(--primary-orange)] transition-colors text-sm"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Our Programs */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Our Programs</h3>
+            <ul className="space-y-2">
+              {programsMenu.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-300 hover:text-[var(--primary-orange)] transition-colors text-sm"
+                  >
                     {item.label}
                   </Link>
                 </li>
@@ -124,26 +174,26 @@ export default function Footer() {
 
           {/* Contact Us */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Contact Us</h3>
-            <div className="space-y-4 text-gray-300 text-sm">
-              <div className="flex gap-3">
-                <span className="font-semibold text-white">Address :</span>
-                <span>
+            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <div className="space-y-3 text-gray-300 text-sm">
+              <div>
+                <span className="font-semibold text-white block mb-1">Address:</span>
+                <span className="text-xs leading-relaxed">
                   Jagriti Enterprise Centre – Purvanchal, Vill – Araipar, PO – Barpar, Baitalpur,
-                  Deoria, Uttar Pradesh – 274201.
+                  Deoria, UP – 274201
                 </span>
               </div>
-              <div className="flex gap-3 items-center">
-                <svg className="w-5 h-5 text-[var(--primary-orange)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex gap-2 items-center">
+                <svg className="w-4 h-4 text-[var(--primary-orange)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span>+91 8887052172 | 8878878718</span>
+                <span className="text-xs">+91 8887052172</span>
               </div>
-              <div className="flex gap-3 items-center">
-                <svg className="w-5 h-5 text-[var(--primary-orange)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex gap-2 items-center">
+                <svg className="w-4 h-4 text-[var(--primary-orange)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:support@jagriti.org" className="hover:text-[var(--primary-orange)]">
+                <a href="mailto:support@jagriti.org" className="hover:text-[var(--primary-orange)] text-xs">
                   support@jagriti.org
                 </a>
               </div>
@@ -152,9 +202,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <div className="mt-12 pt-6 border-t border-white/10 flex justify-center items-center text-sm text-gray-400">
           <p>&copy;2025. JECP All Rights Reserved.</p>
-          <p>Design by CCTPL</p>
         </div>
       </div>
     </footer>

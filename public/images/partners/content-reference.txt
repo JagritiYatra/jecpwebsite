@@ -1,0 +1,45 @@
+OUR PARTNERS PAGE - EXACT CONTENT
+===================================
+
+PAGE TITLE: Our Partners
+URL: https://jecp.in/our-partners/
+
+HERO BANNER: /images/about/innerpgbanner.png (grayscale banyan tree)
+
+---
+
+SECTION HEADINGS:
+- Our Partners
+- Our Clients
+
+---
+
+PARTNER/CLIENT LOGOS (14 total):
+
+1. /images/partners/9-1.png
+2. /images/partners/6-1.png
+3. /images/partners/1-1.png
+4. /images/partners/8-1.png
+5. /images/partners/7-1.png
+6. /images/partners/jecp-homepage-logos-1.png
+7. /images/partners/5-1.png
+8. /images/partners/jecp-homepage-logos.png
+9. /images/partners/2-1.png
+10. /images/partners/3-1.png
+11. /images/partners/4-1.png
+12. /images/partners/Jagriti-clients-logos-9.png
+13. /images/partners/Jagriti-clients-logos-4.png
+14. /images/partners/orix.png
+
+---
+
+IDENTIFIED PARTNER: ORIX
+
+---
+
+DESIGN NOTES:
+- Logo grid layout
+- White/cream background
+- Logos displayed in rows
+- Hover effects on logos
+- Two sections: Partners and Clients

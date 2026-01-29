@@ -1,0 +1,293 @@
+{
+  "metadata": {
+    "source": "https://jecp.in",
+    "scraped_date": "2026-01-29",
+    "total_sections": 10
+  },
+  "navigation": {
+    "order": 0,
+    "location": "top-fixed",
+    "logo": "/images/logos/jecp-logo.png",
+    "menu_items": [
+      { "label": "Home", "href": "/" },
+      { "label": "Who We Are", "href": "/who-we-are", "submenu": ["About Us", "JECP Board", "JECP Team", "Future Roadmap"] },
+      { "label": "JECP", "href": "/jecp", "submenu": ["About JECP", "Our Approach", "Our Facilities", "Network Offices"] },
+      { "label": "Our Programs", "href": "/programs", "submenu": ["Incubation", "Innovation", "Inspiration"] },
+      { "label": "Our Impact", "href": "/impact" },
+      { "label": "Life@Jagriti", "href": "/life-at-jagriti" },
+      { "label": "Media & Resources", "href": "/media" },
+      { "label": "Get Involved", "href": "/get-involved", "submenu": ["Partner", "Mentor", "Volunteer", "Facilities", "Apply", "Newsletter", "Contact"] }
+    ]
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "order": 1,
+      "name": "Hero Section",
+      "location": "top-full-width",
+      "images": ["/images/hero/home-banner.png"],
+      "content": {
+        "heading": "BUILDING INDIA THROUGH ENTERPRISE",
+        "tagline": "Every small idea can carry the weight of a nation!",
+        "cta_button": null
+      },
+      "design_notes": "Full-width banner, dark overlay on image, centered white text"
+    },
+    {
+      "id": "featured-cards",
+      "order": 2,
+      "name": "Featured Visual Cards",
+      "location": "below-hero",
+      "layout": "4-column-grid",
+      "cards": [
+        {
+          "id": "card-incubation",
+          "title": "The Incubation Ground",
+          "tagline": "Where local dreams find roots and grow into enterprises!",
+          "image": "/images/sections/incubation-center.png"
+        },
+        {
+          "id": "card-banyan",
+          "title": "The Banyan Revolution",
+          "tagline": "One shade many branches - A movement of grassroots prosperity!",
+          "image": "/images/sections/banyan-revolution.jpeg"
+        },
+        {
+          "id": "card-udyamis",
+          "title": "Our Udyamis, Our Pride",
+          "tagline": "Every face here is a story of courage, grit, and hope!",
+          "image": "/images/sections/udyamis-pride.png"
+        },
+        {
+          "id": "card-join",
+          "title": "Join the Journey",
+          "tagline": "Together we nurture the enterprise of a rising Bharat!",
+          "image": "/images/sections/get-involved.png"
+        }
+      ],
+      "design_notes": "Image cards with overlay text, hover effects"
+    },
+    {
+      "id": "news-carousel",
+      "order": 3,
+      "name": "News/Updates Carousel",
+      "location": "below-featured-cards",
+      "layout": "horizontal-scroll-ticker",
+      "content": {
+        "announcements": [
+          "Green Enterprise Cohort 3.0 launched with 22 New Enterprises",
+          "Azeedo Pvt. Ltd. wins Rs 5 Lakh in Impact Quest 2.0",
+          "Earth Rakshak diverts 40 kg of Waste to Sales",
+          "Chaimitra wins Best Newcomer - Tea Cafe (North), 2025",
+          "MoU with CRB supporting 25 FPOs and ~15,000 farmers",
+          "Women CoE exposure visit to Jharkhand"
+        ]
+      },
+      "design_notes": "Auto-scrolling news ticker, possibly with pause on hover"
+    },
+    {
+      "id": "impact-dashboard",
+      "order": 4,
+      "name": "Impact Dashboard",
+      "location": "mid-page",
+      "layout": "5-column-stats",
+      "content": {
+        "heading": "Impact Dashboard",
+        "stats": [
+          { "label": "Enterprises Incubated", "value": "150+", "icon": "building" },
+          { "label": "Total Revenue", "value": "25 Cr", "suffix": "Cr", "icon": "currency" },
+          { "label": "Women-led Enterprises", "value": "45%", "icon": "users" },
+          { "label": "Growth in Revenue", "value": "120%", "icon": "trending-up" },
+          { "label": "Livelihoods Impacted", "value": "50K", "suffix": "K", "icon": "heart" }
+        ]
+      },
+      "design_notes": "Counter animation, icon + number + label layout, colored background"
+    },
+    {
+      "id": "udyami-stories",
+      "order": 5,
+      "name": "Udyami Stories Section",
+      "location": "mid-page",
+      "layout": "carousel-with-cards",
+      "content": {
+        "heading": "Our Udyami Stories",
+        "subheading": "Showcasing inspiring journeys of rural entrepreneurs transforming challenges into opportunities with JECP's support!",
+        "profiles": [
+          {
+            "name": "Sachin Verma",
+            "title": "Founder, Santosh Masala Udyog",
+            "image": "/images/udyamis/sachin-verma.png"
+          },
+          {
+            "name": "Sacchidanand Shahi",
+            "title": "Founder, Sarvdev Agro Pvt. Ltd",
+            "image": "/images/udyamis/sacchidanand-shahi.png"
+          },
+          {
+            "name": "Abhishek Kushwaha",
+            "title": "Founder, Abonics India Pvt. Ltd",
+            "image": "/images/udyamis/abhishek-kushwaha.png"
+          },
+          {
+            "name": "Anita Rai",
+            "title": "Founder, Shree Mythili Enterprises",
+            "image": "/images/udyamis/anita-rai.png"
+          },
+          {
+            "name": "Deepika",
+            "title": "Entrepreneur",
+            "image": "/images/udyamis/deepika.png"
+          },
+          {
+            "name": "Poonam",
+            "title": "Entrepreneur",
+            "image": "/images/udyamis/poonam.png"
+          }
+        ],
+        "cta": "View All"
+      },
+      "design_notes": "Card carousel with navigation arrows, profile image + name + title"
+    },
+    {
+      "id": "recent-happenings",
+      "order": 6,
+      "name": "Recent Happenings/Events",
+      "location": "mid-page",
+      "layout": "grid-with-dates",
+      "images": [
+        "/images/events/event-1.png",
+        "/images/events/event-2.png",
+        "/images/events/event-3.png",
+        "/images/events/event-4.png",
+        "/images/events/event-5.png",
+        "/images/events/event-6.png"
+      ],
+      "content": {
+        "heading": "Recent Happenings",
+        "subheading": "Empowering Entrepreneurs with Knowledge, Skills and Tools for Sustainable Growth!",
+        "events": [
+          { "date": "September 20, 2025", "title": "The Science Show" },
+          { "date": "July 5, 2025", "title": "Green Cohort Launch 2025" },
+          { "date": "August 15, 2025", "title": "Independence Day Celebration" },
+          { "date": "August 20, 2025", "title": "Film Making Workshop" },
+          { "date": "August 25, 2025", "title": "Content Creator Workshop with Satish Kushwaha" },
+          { "date": "August 28, 2025", "title": "Sahjeevan Samvaad" }
+        ],
+        "cta": "View More"
+      },
+      "design_notes": "Event cards with image, date badge, and title"
+    },
+    {
+      "id": "frameworks",
+      "order": 7,
+      "name": "Udyamita Frameworks",
+      "location": "lower-mid-page",
+      "layout": "two-column-alternating",
+      "content": {
+        "main_heading": "Our Udyamita Frameworks",
+        "frameworks": [
+          {
+            "name": "JECP 3xI Framework",
+            "description": "JECP's 3xI framework is a beacon of transformation, centering on Incubation, Innovation, and Inspiration, all rooted in sustainability.",
+            "image": "/images/frameworks/3xi-framework.png"
+          },
+          {
+            "name": "JECP 7M Framework",
+            "description": "The 7M framework works a lighthouse for Udyamis, guiding them through Mobilization, Mentorship, Market Connect, Money, Miscellaneous Services, Mahol (creating an inspiring environment), and Mitra (partners with complementary skills).",
+            "image": "/images/frameworks/7m-framework.png"
+          }
+        ]
+      },
+      "design_notes": "Image on one side, text on other, alternating layout"
+    },
+    {
+      "id": "testimonials",
+      "order": 8,
+      "name": "Testimonials/Wisdom Section",
+      "location": "lower-page",
+      "layout": "carousel-quotes",
+      "content": {
+        "heading": "Wisdom That Guides Us",
+        "subheading": "Here's What Our Clients Say",
+        "testimonials": [
+          {
+            "speaker": "Dr R. A. Mashelkar",
+            "title": "Padma Vibhushan, Padma Bhushan, Padma Shri",
+            "quote": "The JECP is founded on Jagriti's decade long understanding of enterprise and innovation in the real India. The ecosystem it is creating will take forward ideas of Gandhian Engineering to the masses.",
+            "image": "/images/testimonials/dr-mashelkar.jpg"
+          },
+          {
+            "speaker": "R. Gopalakrishnan",
+            "title": "CEO - Mindworks, Former Director - Tata Sons",
+            "quote": "If in 2008 Jagriti Yatra was at its Gangotri; with the architecture, location and objectives of the JECP, Jagriti is poised at the Sangam...",
+            "image": "/images/testimonials/r-gopalakrishnan.jpg"
+          },
+          {
+            "speaker": "Dr. Kiran Bedi",
+            "title": "IPS, Former Governor",
+            "quote": "Jagriti Enterprise Centre will lead to women empowerment. Till the time our women are self-reliant, the country can't move to self-reliance.",
+            "image": "/images/testimonials/dr-kiran-bedi.jpg"
+          },
+          {
+            "speaker": "Shri Ram Nath Kovind",
+            "title": "Hon. President of India 2017",
+            "quote": "This is a great start. Jagriti must continue this enterprise movement and lead it at the national scale.",
+            "image": "/images/testimonials/president-kovind.jpg"
+          }
+        ]
+      },
+      "design_notes": "Quote cards with speaker photo, name, title, and quote text"
+    },
+    {
+      "id": "partners",
+      "order": 9,
+      "name": "Partners Section",
+      "location": "near-footer",
+      "layout": "logo-grid",
+      "images": [
+        "/images/partners/partner-logos-1.png",
+        "/images/partners/partner-logos-2.png"
+      ],
+      "content": {
+        "heading": "Together We Rise",
+        "subheading": "Empowering Communities, Building Enterprises, and Shaping a Stronger Tomorrow!",
+        "section_title": "Our Partners",
+        "section_subtitle": "Strengthening Our Mission through Collaboration, Innovation, and a Shared Commitment to Growth!"
+      },
+      "design_notes": "Logo grid, possibly auto-scrolling or static grid"
+    },
+    {
+      "id": "footer",
+      "order": 10,
+      "name": "Footer",
+      "location": "bottom",
+      "layout": "multi-column",
+      "images": ["/images/logos/jecp-logo-white.png"],
+      "content": {
+        "about_text": "At JECP, you are at the heart of a cutting-edge incubation center dedicated to empowering small and medium enterprises across Tier 2 and 3 districts of India.",
+        "social_links": [
+          { "platform": "Facebook", "url": "#" },
+          { "platform": "Twitter", "url": "#" },
+          { "platform": "Instagram", "url": "#" },
+          { "platform": "LinkedIn", "url": "#" },
+          { "platform": "YouTube", "url": "#" }
+        ],
+        "quick_menu": [
+          "JECP Board",
+          "Life@Jagriti",
+          "Incubation Facilities",
+          "Media and Resources",
+          "Network Offices"
+        ],
+        "contact": {
+          "address": "Jagriti Enterprise Centre - Purvanchal, Vill - Araipar, PO - Barpar, Baitalpur, Deoria, Uttar Pradesh - 274201",
+          "phone": ["+91 8887052172", "8878878718"],
+          "email": "support@jagriti.org"
+        },
+        "copyright": "2025. JECP All Rights Reserved.",
+        "design_credit": "Design by CCTPL"
+      },
+      "design_notes": "Dark background, white text, multi-column layout"
+    }
+  ]
+}

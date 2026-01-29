@@ -1,0 +1,126 @@
+{
+  "stories": [
+    {
+      "id": "sachin-verma",
+      "slug": "sachin-verma",
+      "name": "Sachin Verma",
+      "company": "Santosh Masala Udyog",
+      "image": "/images/udyamis/sachin-verma.png",
+      "shortDescription": "Revived his father's spice business into a thriving enterprise",
+      "fullStory": "Sachin Verma revived his father Rajendra Verma's spice business that had declined due to market competition from factory-made brands. Starting with unbranded packets in 2013, Sachin officially registered Santosh Masala in 2018. During the COVID-19 pandemic, when larger spice manufacturers faced supply chain disruptions, Santosh Masala flourished by serving local markets in Kushinagar, Deoria, and Ballia districts.",
+      "achievements": [
+        "Expanded product line to 9 varieties including vegetable masala, meat masala, red chili powder, and turmeric powder",
+        "Created employment for 9 individuals, including 4 women",
+        "Secured ₹10 lakh loan through Jagriti Enterprise Center (September 2023)",
+        "Purchased packaging machinery and essential equipment",
+        "Plans to introduce biryani and chana masala to product lineup"
+      ],
+      "quote": "Transformed a 20-year-old family dream into a thriving enterprise within one year",
+      "location": "Kushinagar, Uttar Pradesh"
+    },
+    {
+      "id": "sacchidanand-shahi",
+      "slug": "sacchidanand-shahi",
+      "name": "Sacchidanand Shahi",
+      "company": "Sarvdev Agro Pvt. Ltd",
+      "image": "/images/udyamis/sacchidanand-shahi.png",
+      "shortDescription": "Built a company with ₹5 million turnover from just ₹20,000",
+      "fullStory": "Sacchidanand's journey exemplifies determination overcoming financial constraints. Starting with just ₹20,000 after returning from Dubai during COVID-19, he built a company that achieved annual turnover exceeding ₹5 million within five years. After his first venture Riddhi-Siddhi Home Industries collapsed with ₹800,000 in losses, meeting Jagriti's enterprise leader Markandey Dayal Tripathi provided crucial mentorship to restart.",
+      "achievements": [
+        "Founded Sarvdev Agro Pvt. Ltd in October 2022",
+        "Achieved annual turnover exceeding ₹5 million",
+        "Established distributors across Gorakhpur, Deoria, and Kushinagar districts",
+        "Planning ₹1.6 million investment in an oil mill creating 10+ jobs"
+      ],
+      "quote": "Destiny favors those who breathe life into their dreams. It's not the wings but the willpower that makes us fly.",
+      "location": "Semra village, Deoria, Uttar Pradesh"
+    },
+    {
+      "id": "abhishek-kushwaha",
+      "slug": "abhishek-kushwaha",
+      "name": "Abhishek Kushwaha",
+      "company": "Abonics India Pvt. Ltd",
+      "image": "/images/udyamis/abhishek-kushwaha.png",
+      "shortDescription": "Young innovator who invented a patented digital walking stick",
+      "fullStory": "Abhishek's journey began at age 16 when his grandfather suffered a paralysis stroke. Watching his grandfather struggle sparked innovation - he designed a digital walking stick featuring eight technological features including emergency light, power bank, watch system, SD card music system, presence indication light, bell system, and charging system. The Indian government granted him a patent for this invention.",
+      "achievements": [
+        "Received patent from Indian government for digital walking stick",
+        "Won 23+ awards including Bharat Gaurav Samman, Kishore Vaigyanik Samman",
+        "National Child Scientist Award recipient",
+        "105th Indian Science Congress Award",
+        "Developing science and engineering labs for ITIs and polytechnics"
+      ],
+      "quote": "Every time his grandfather needed to move, Abhishek would hand him a walking stick and guide him by holding a torch ahead.",
+      "location": "Ramkaran Patti village, Kushinagar, Uttar Pradesh",
+      "age": 23
+    },
+    {
+      "id": "anita-rai",
+      "slug": "anita-rai",
+      "name": "Anita Rai",
+      "company": "Shree Mythili Enterprises",
+      "image": "/images/udyamis/anita-rai.png",
+      "shortDescription": "Master trainer who empowered 600+ women in banana fiber production",
+      "fullStory": "Anita transformed from a homemaker into an entrepreneur after her husband's poultry business failed. She traveled to the National Research Center for Banana in Chennai for specialized training and was appointed as a master trainer. In 2022, she established Shree Mythili Enterprises, producing over 20 products including banana flour, chips, vermicelli, juice, and pickles.",
+      "achievements": [
+        "Empowered 600+ women in banana fiber production",
+        "Created 150+ unique products from banana plants",
+        "Secured ₹1 lakh from Accenture and ₹2 lakh from Aavishkaar Foundation",
+        "Established pan-India market presence in Noida, Mumbai, Ghaziabad, Lucknow, Varanasi"
+      ],
+      "quote": "Their support in improving product quality and connecting me to the right markets has been invaluable.",
+      "location": "Kushinagar, Uttar Pradesh"
+    },
+    {
+      "id": "poonam",
+      "slug": "poonam",
+      "name": "Poonam",
+      "company": "Gaurishankar Industries (Drone Didi)",
+      "image": "/images/udyamis/poonam.png",
+      "shortDescription": "From homemaker to camphor manufacturing entrepreneur",
+      "fullStory": "Poonam spent 15 years as a homemaker before COVID-19 devastated their family business. During the second wave in 2021, she researched online, watched YouTube tutorials, and proposed launching a camphor manufacturing venture. They established Gaurishankar Industries in March 2023, launching their flagship product Siddhi Aarti Kapoor.",
+      "achievements": [
+        "Products distributed across Gorakhpur, Deoria, and Kushinagar districts",
+        "Expanded product line with multiple camphor sizes",
+        "Successfully transitioned from struggling venture to thriving enterprise",
+        "Plans to expand into complementary religious ritual products"
+      ],
+      "quote": "My husband initially dismissed her input, believing she lacked business acumen. But persistence proved him wrong.",
+      "location": "Gauribazar, Deoria, Uttar Pradesh"
+    },
+    {
+      "id": "deepika-singh",
+      "slug": "deepika-singh",
+      "name": "Deepika Singh",
+      "company": "Atrangi Kalakari",
+      "image": "/images/udyamis/deepika.png",
+      "shortDescription": "Artist turned terracotta jewelry entrepreneur employing 30 women",
+      "fullStory": "Deepika Singh's passion for painting led her from exhibiting at Raj Bhawan in Lucknow to establishing Atrangi Kalakari. After participating in Jagriti Yatra in 2022, she learned terracotta craftsmanship and now creates handcrafted jewelry combining artistic elegance with traditional clay work.",
+      "achievements": [
+        "Employs 30 women artisans earning ₹5,000-₹10,000 monthly",
+        "Sells across India (Mumbai, Gujarat) and internationally",
+        "Product range includes terracotta jewelry, keychains, gift items",
+        "Featured at prestigious Raj Bhawan exhibition in Lucknow"
+      ],
+      "quote": "Terracotta? It's just clay, it'll break - shopkeepers initially said, but Deepika overcame market skepticism.",
+      "location": "Gorakhpur, Uttar Pradesh"
+    },
+    {
+      "id": "kiran-sharma",
+      "slug": "kiran-sharma",
+      "name": "Kiran Sharma",
+      "company": "Matri Shakti Moonj Craft",
+      "image": "/images/udyamis/kiran-sharma.png",
+      "shortDescription": "From childhood skill to leading 15 women artisans in moonj craft",
+      "fullStory": "Married at 17, mother of seven children, Kiran recalled her childhood skill of weaving munj grass baskets. In 2017, she met Jagriti team who connected her to Tech Shakti digital training. Today she leads 15 women artisans creating bread boxes, wall plates, bags, baskets, and gift items sold in Delhi, Mumbai, and UK.",
+      "achievements": [
+        "Leads 15 women artisans",
+        "Earns ₹15,000-₹20,000 monthly",
+        "Products sold in Delhi, Mumbai, and UK",
+        "Gifted a handcrafted Ram figure to CM Yogi Adityanath"
+      ],
+      "quote": "Never lose hope. If you have passion, helping hands will find their way. Keep your courage intact, and success will be yours.",
+      "location": "Behradabar village, Uttar Pradesh"
+    }
+  ]
+}

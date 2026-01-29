@@ -44,9 +44,9 @@ export default function AdminManagementPage() {
     const { data: adminData } = await supabase
       .from('jecp_admins')
       .select('*')
-      .eq('email', authUser.email)
+      .eq('email', authUser.email?.toLowerCase())
       .eq('is_active', true)
-      .single();
+      .maybeSingle();
 
     if (!adminData || adminData.role !== 'super_admin') {
       router.push('/webmis');
@@ -93,7 +93,7 @@ export default function AdminManagementPage() {
         .from('jecp_admins')
         .select('id')
         .eq('email', email)
-        .single();
+        .maybeSingle();
 
       if (existing) {
         setError('This email is already an admin.');

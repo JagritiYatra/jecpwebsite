@@ -35,9 +35,9 @@ export async function GET(request: Request) {
       const { data: adminData } = await supabase
         .from('jecp_admins')
         .select('id, email, role')
-        .eq('email', user.email)
+        .eq('email', user.email?.toLowerCase())
         .eq('is_active', true)
-        .single()
+        .maybeSingle()
 
       if (adminData) {
         return NextResponse.redirect(`${origin}${next}`)

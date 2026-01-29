@@ -48,9 +48,9 @@ export async function middleware(request: NextRequest) {
     const { data: adminData } = await supabase
       .from('jecp_admins')
       .select('id, email, role, is_active')
-      .eq('email', user.email)
+      .eq('email', user.email?.toLowerCase())
       .eq('is_active', true)
-      .single()
+      .maybeSingle()
 
     if (!adminData) {
       // Not an admin, redirect to login with error

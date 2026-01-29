@@ -30,9 +30,9 @@ export default function AdminLoginPage() {
         const { data: adminData } = await supabase
           .from('jecp_admins')
           .select('id')
-          .eq('email', user.email)
+          .eq('email', user.email?.toLowerCase())
           .eq('is_active', true)
-          .single();
+          .maybeSingle();
 
         if (adminData) {
           router.push('/webmis');
@@ -52,12 +52,19 @@ export default function AdminLoginPage() {
       const supabase = createClient();
 
       // Check if email is an admin
-      const { data: adminData } = await supabase
+      const { data: adminData, error: adminError } = await supabase
         .from('jecp_admins')
         .select('id, email')
-        .eq('email', email.toLowerCase())
+        .eq('email', email.toLowerCase().trim())
         .eq('is_active', true)
-        .single();
+        .maybeSingle();
+
+      if (adminError) {
+        console.error('Admin check error:', adminError);
+        setError(`Database error: ${adminError.message}`);
+        setIsLoading(false);
+        return;
+      }
 
       if (!adminData) {
         setError('This email is not authorized to access the admin panel.');

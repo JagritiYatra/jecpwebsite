@@ -54,9 +54,9 @@ export default function AdminDashboardPage() {
       const { data: adminData } = await supabase
         .from('jecp_admins')
         .select('*')
-        .eq('email', authUser.email)
+        .eq('email', authUser.email?.toLowerCase())
         .eq('is_active', true)
-        .single();
+        .maybeSingle();
 
       if (!adminData) {
         router.push('/webmis/login?error=unauthorized');

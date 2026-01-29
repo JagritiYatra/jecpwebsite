@@ -58,6 +58,17 @@ export default function MentorPage() {
 
       if (error) throw error;
 
+      // Send confirmation email
+      await fetch('/api/send-confirmation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'mentor',
+          name: formData.full_name,
+          email: formData.email,
+        }),
+      });
+
       setSubmitStatus('success');
       setFormData({
         full_name: '',

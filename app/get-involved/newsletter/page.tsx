@@ -52,6 +52,17 @@ export default function NewsletterPage() {
         throw error;
       }
 
+      // Send confirmation email
+      await fetch('/api/send-confirmation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'newsletter',
+          name: formData.full_name,
+          email: formData.email,
+        }),
+      });
+
       setSubmitStatus('success');
       setFormData({
         full_name: '',

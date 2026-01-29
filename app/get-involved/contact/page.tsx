@@ -36,6 +36,17 @@ export default function ContactPage() {
 
       if (error) throw error;
 
+      // Send confirmation email
+      await fetch('/api/send-confirmation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'contact',
+          name: `${formData.first_name} ${formData.last_name}`,
+          email: formData.email,
+        }),
+      });
+
       setSubmitStatus('success');
       setFormData({
         first_name: '',

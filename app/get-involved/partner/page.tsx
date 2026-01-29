@@ -56,6 +56,17 @@ export default function PartnerPage() {
 
       if (error) throw error;
 
+      // Send confirmation email
+      await fetch('/api/send-confirmation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'partner',
+          name: formData.contact_person,
+          email: formData.email,
+        }),
+      });
+
       setSubmitStatus('success');
       setFormData({
         organization_name: '',

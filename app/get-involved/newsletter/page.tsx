@@ -4,6 +4,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { createClient } from '@/lib/supabase';
+import {
+  FormContainer,
+  FormSection,
+  FormInput,
+  FormCheckboxGroup,
+  FormRadioGroup,
+  FormConsent,
+  FormSubmitButton,
+  FormSuccess,
+  FormError,
+} from '@/components/forms/FormElements';
 
 export default function NewsletterPage() {
   const [formData, setFormData] = useState({
@@ -52,7 +63,6 @@ export default function NewsletterPage() {
         throw error;
       }
 
-      // Send confirmation email
       await fetch('/api/send-confirmation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -85,6 +95,20 @@ export default function NewsletterPage() {
     }
   };
 
+  const contentOptions = [
+    { name: 'content_programs_events', label: 'Programs & Events' },
+    { name: 'content_success_stories', label: 'Success Stories' },
+    { name: 'content_resources_tools', label: 'Resources & Tools' },
+    { name: 'content_internship_opportunities', label: 'Internship Opportunities' },
+    { name: 'content_workshops_trainings', label: 'Workshops & Trainings' },
+  ];
+
+  const frequencyOptions = [
+    { value: 'monthly', label: 'Monthly' },
+    { value: 'quarterly', label: 'Quarterly' },
+    { value: 'special-announcements', label: 'Special Only' },
+  ];
+
   return (
     <main>
       {/* Hero Banner */}
@@ -96,190 +120,160 @@ export default function NewsletterPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[var(--primary-navy)]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary-navy)]/90 to-[var(--primary-navy)]/70" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Subscribe to Newsletter</h1>
-            <div className="w-16 h-1 bg-[var(--primary-orange)] mt-2 mx-auto"></div>
+            <div className="w-16 h-1 bg-[var(--primary-orange)] mt-2 mx-auto rounded-full"></div>
           </div>
         </div>
       </section>
 
       {/* Breadcrumb */}
-      <div className="bg-gray-100 py-3 px-4">
+      <div className="bg-white border-b py-3 px-4">
         <div className="max-w-7xl mx-auto">
-          <nav className="text-sm text-gray-600">
-            <Link href="/" className="hover:text-[var(--primary-orange)]">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/get-involved" className="hover:text-[var(--primary-orange)]">Get Involved</Link>
-            <span className="mx-2">/</span>
-            <span className="text-[var(--primary-navy)]">Newsletter</span>
+          <nav className="text-sm text-gray-600 flex items-center gap-2">
+            <Link href="/" className="hover:text-[var(--primary-orange)] transition-colors">Home</Link>
+            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            <Link href="/get-involved" className="hover:text-[var(--primary-orange)] transition-colors">Get Involved</Link>
+            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            <span className="text-[var(--primary-navy)] font-medium">Newsletter</span>
           </nav>
         </div>
       </div>
 
       {/* Form Section */}
-      <section className="py-12 md:py-16 px-4 bg-[var(--background-cream)]">
+      <section className="py-12 md:py-16 px-4 bg-gradient-to-b from-gray-50 to-[var(--background-cream)]">
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-navy)] mb-2">
-                Stay Connected
-              </h2>
-              <p className="text-gray-600">
-                Subscribe to receive updates on our programs, success stories, and opportunities
-              </p>
-            </div>
-
-            {submitStatus === 'success' && (
-              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
-                Thank you for subscribing! You will now receive updates from JECP.
+          {/* Feature Banner */}
+          <div className="bg-gradient-to-r from-[var(--primary-orange)] to-[#d4823f] rounded-2xl p-6 mb-8 text-white shadow-xl">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
               </div>
+              <div>
+                <h3 className="text-xl font-bold">Stay Connected with JECP</h3>
+                <p className="text-white/90 text-sm">Get updates on programs, success stories, and opportunities</p>
+              </div>
+            </div>
+          </div>
+
+          <FormContainer
+            title="Subscribe to Our Newsletter"
+            subtitle="Join our community of entrepreneurs and supporters"
+            icon={
+              <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+            }
+          >
+            {submitStatus === 'success' && (
+              <FormSuccess message="Thank you for subscribing! You will now receive updates from JECP." />
             )}
 
             {submitStatus === 'error' && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
-                {errorMessage || 'Something went wrong. Please try again.'}
-              </div>
+              <FormError message={errorMessage || 'Something went wrong. Please try again.'} />
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Basic Information */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Full Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
+              <FormSection title="Your Information">
+                <FormInput
+                  label="Full Name"
                   name="full_name"
                   value={formData.full_name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                  placeholder="Enter your full name"
+                  icon={
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  }
                 />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Email Address <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
+                <FormInput
+                  label="Email Address"
                   name="email"
+                  type="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                  placeholder="your.email@example.com"
+                  icon={
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  }
                 />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Profession / Area of Interest
-                  </label>
-                  <input
-                    type="text"
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <FormInput
+                    label="Profession / Interest"
                     name="profession_interest"
                     value={formData.profession_interest}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                    placeholder="e.g., Entrepreneur, Student"
+                    icon={
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    }
                   />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    City / State
-                  </label>
-                  <input
-                    type="text"
+                  <FormInput
+                    label="City / State"
                     name="city_state"
                     value={formData.city_state}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                    placeholder="e.g., Deoria, UP"
+                    icon={
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    }
                   />
                 </div>
-              </div>
+              </FormSection>
 
-              {/* Preferred Content Type */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Preferred Content Type
-                </label>
-                <div className="space-y-2">
-                  {[
-                    { name: 'content_programs_events', label: 'Programs & Events' },
-                    { name: 'content_success_stories', label: 'Success Stories' },
-                    { name: 'content_resources_tools', label: 'Resources & Tools' },
-                    { name: 'content_internship_opportunities', label: 'Internship Opportunities' },
-                    { name: 'content_workshops_trainings', label: 'Workshops & Trainings' },
-                  ].map((item) => (
-                    <label key={item.name} className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        name={item.name}
-                        checked={formData[item.name as keyof typeof formData] as boolean}
-                        onChange={handleChange}
-                        className="w-4 h-4 text-[var(--primary-orange)] border-gray-300 rounded focus:ring-[var(--primary-orange)]"
-                      />
-                      <span className="text-gray-700">{item.label}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
+              <FormSection title="Content Preferences">
+                <FormCheckboxGroup
+                  label="What content interests you?"
+                  options={contentOptions}
+                  values={formData as unknown as Record<string, boolean>}
+                  onChange={handleChange}
+                />
+              </FormSection>
 
-              {/* Frequency */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Frequency of Updates
-                </label>
-                <div className="flex flex-wrap gap-4">
-                  {[
-                    { value: 'monthly', label: 'Monthly' },
-                    { value: 'quarterly', label: 'Quarterly' },
-                    { value: 'special-announcements', label: 'Special Announcements Only' },
-                  ].map((item) => (
-                    <label key={item.value} className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="frequency"
-                        value={item.value}
-                        checked={formData.frequency === item.value}
-                        onChange={handleChange}
-                        className="w-4 h-4 text-[var(--primary-orange)] border-gray-300 focus:ring-[var(--primary-orange)]"
-                      />
-                      <span className="text-gray-700">{item.label}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
+              <FormSection title="Email Frequency">
+                <FormRadioGroup
+                  label="How often would you like to hear from us?"
+                  name="frequency"
+                  options={frequencyOptions}
+                  value={formData.frequency}
+                  onChange={handleChange}
+                />
+              </FormSection>
 
-              {/* Consent */}
-              <div>
-                <label className="flex items-start gap-2 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    name="consent_given"
-                    checked={formData.consent_given}
-                    onChange={handleChange}
-                    required
-                    className="w-4 h-4 mt-1 text-[var(--primary-orange)] border-gray-300 rounded focus:ring-[var(--primary-orange)]"
-                  />
-                  <span className="text-sm text-gray-700">
-                    I consent to receiving newsletter updates from JECP. I understand I can unsubscribe at any time. <span className="text-red-500">*</span>
-                  </span>
-                </label>
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full py-3 px-6 bg-[var(--primary-orange)] text-white font-semibold rounded-lg hover:bg-[var(--primary-orange-hover)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              <FormConsent
+                name="consent_given"
+                checked={formData.consent_given}
+                onChange={handleChange}
               >
-                {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-              </button>
+                I consent to receiving newsletter updates from JECP. I understand I can unsubscribe at any time.
+                <span className="text-[var(--primary-orange)]"> *</span>
+              </FormConsent>
+
+              <FormSubmitButton
+                isSubmitting={isSubmitting}
+                label="Subscribe Now"
+                loadingLabel="Subscribing..."
+              />
             </form>
-          </div>
+          </FormContainer>
         </div>
       </section>
     </main>

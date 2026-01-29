@@ -4,6 +4,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { createClient } from '@/lib/supabase';
+import {
+  FormContainer,
+  FormSection,
+  FormInput,
+  FormTextarea,
+  FormSelect,
+  FormConsent,
+  FormSubmitButton,
+  FormSuccess,
+  FormError,
+} from '@/components/forms/FormElements';
 
 export default function FacilitiesPage() {
   const [formData, setFormData] = useState({
@@ -51,7 +62,6 @@ export default function FacilitiesPage() {
 
       if (error) throw error;
 
-      // Send confirmation email
       await fetch('/api/send-confirmation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -85,6 +95,25 @@ export default function FacilitiesPage() {
     }
   };
 
+  const facilityTypeOptions = [
+    { value: '', label: 'Select an option' },
+    { value: 'rural-immersion', label: 'Rural Immersion Program' },
+    { value: 'corporate-retreat', label: 'Corporate Retreat' },
+    { value: 'conference', label: 'Conference' },
+    { value: 'workshop', label: 'Workshop' },
+    { value: 'other', label: 'Other' },
+  ];
+
+  const heardAboutOptions = [
+    { value: '', label: 'Select an option' },
+    { value: 'social-media', label: 'Social Media' },
+    { value: 'website', label: 'Website' },
+    { value: 'referral', label: 'Referral' },
+    { value: 'event', label: 'Event' },
+    { value: 'news', label: 'News/Media' },
+    { value: 'other', label: 'Other' },
+  ];
+
   return (
     <main>
       {/* Hero Banner */}
@@ -96,249 +125,227 @@ export default function FacilitiesPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[var(--primary-navy)]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary-navy)]/90 to-[var(--primary-navy)]/70" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Use Our Facilities</h1>
-            <div className="w-16 h-1 bg-[var(--primary-orange)] mt-2 mx-auto"></div>
+            <div className="w-16 h-1 bg-[var(--primary-orange)] mt-2 mx-auto rounded-full"></div>
           </div>
         </div>
       </section>
 
       {/* Breadcrumb */}
-      <div className="bg-gray-100 py-3 px-4">
+      <div className="bg-white border-b py-3 px-4">
         <div className="max-w-7xl mx-auto">
-          <nav className="text-sm text-gray-600">
-            <Link href="/" className="hover:text-[var(--primary-orange)]">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/get-involved" className="hover:text-[var(--primary-orange)]">Get Involved</Link>
-            <span className="mx-2">/</span>
-            <span className="text-[var(--primary-navy)]">Facilities</span>
+          <nav className="text-sm text-gray-600 flex items-center gap-2">
+            <Link href="/" className="hover:text-[var(--primary-orange)] transition-colors">Home</Link>
+            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            <Link href="/get-involved" className="hover:text-[var(--primary-orange)] transition-colors">Get Involved</Link>
+            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            <span className="text-[var(--primary-navy)] font-medium">Facilities</span>
           </nav>
         </div>
       </div>
 
       {/* Form Section */}
-      <section className="py-12 md:py-16 px-4 bg-[var(--background-cream)]">
+      <section className="py-12 md:py-16 px-4 bg-gradient-to-b from-gray-50 to-[var(--background-cream)]">
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-navy)] mb-2">
-                Facility Inquiry
-              </h2>
-              <p className="text-gray-600">
-                Book our world-class facilities for your programs and events
-              </p>
-            </div>
-
-            {submitStatus === 'success' && (
-              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
-                Thank you for your inquiry! Our team will review your request and get back to you shortly.
+          {/* Info Banner */}
+          <div className="bg-gradient-to-r from-teal-600 to-teal-700 rounded-2xl p-6 mb-8 text-white shadow-xl">
+            <div className="flex items-start gap-4">
+              <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
               </div>
+              <div>
+                <h3 className="text-xl font-bold mb-1">World-Class Facilities</h3>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  Book our state-of-the-art facilities for your programs, retreats, conferences,
+                  and workshops. Experience rural India while having access to modern amenities.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <FormContainer
+            title="Facility Inquiry"
+            subtitle="Book our facilities for your programs and events"
+            icon={
+              <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            }
+          >
+            {submitStatus === 'success' && (
+              <FormSuccess message="Thank you for your inquiry! Our team will review your request and get back to you shortly." />
             )}
 
             {submitStatus === 'error' && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
-                {errorMessage || 'Something went wrong. Please try again.'}
-              </div>
+              <FormError message={errorMessage || 'Something went wrong. Please try again.'} />
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Basic Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Full Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
+              <FormSection title="Contact Information">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <FormInput
+                    label="Full Name"
                     name="full_name"
                     value={formData.full_name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                    placeholder="Enter your full name"
+                    icon={
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                    }
                   />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Organization / Institution (if applicable)
-                  </label>
-                  <input
-                    type="text"
+                  <FormInput
+                    label="Organization / Institution"
                     name="organization_name"
                     value={formData.organization_name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                    placeholder="If applicable"
+                    icon={
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                    }
                   />
                 </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <FormInput
+                    label="Email Address"
                     name="email"
+                    type="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                    placeholder="your.email@example.com"
+                    icon={
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    }
                   />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Phone Number <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="tel"
+                  <FormInput
+                    label="Phone Number"
                     name="phone"
+                    type="tel"
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                    placeholder="+91 XXXXX XXXXX"
+                    icon={
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    }
                   />
                 </div>
-              </div>
+              </FormSection>
 
-              {/* Type of Facility Use */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Type of Facility Use <span className="text-red-500">*</span>
-                </label>
-                <select
+              <FormSection title="Facility Requirements">
+                <FormSelect
+                  label="Type of Facility Use"
                   name="facility_type"
                   value={formData.facility_type}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
-                >
-                  <option value="">Select an option</option>
-                  <option value="rural-immersion">Rural Immersion Program</option>
-                  <option value="corporate-retreat">Corporate Retreat</option>
-                  <option value="conference">Conference</option>
-                  <option value="workshop">Workshop</option>
-                  <option value="other">Other</option>
-                </select>
+                  options={facilityTypeOptions}
+                />
                 {formData.facility_type === 'other' && (
-                  <input
-                    type="text"
+                  <FormInput
+                    label="Please Specify"
                     name="facility_type_other"
                     value={formData.facility_type_other}
                     onChange={handleChange}
-                    placeholder="Please specify"
-                    className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                    placeholder="Describe your facility requirement"
                   />
                 )}
-              </div>
-
-              {/* Dates and Participants */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Intended Dates / Duration <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <FormInput
+                    label="Intended Dates / Duration"
                     name="intended_dates"
                     value={formData.intended_dates}
                     onChange={handleChange}
                     required
                     placeholder="e.g., March 15-17, 2025"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                    icon={
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    }
                   />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Number of Participants <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="number"
+                  <FormInput
+                    label="Number of Participants"
                     name="number_of_participants"
+                    type="number"
                     value={formData.number_of_participants}
                     onChange={handleChange}
                     required
-                    min="1"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                    placeholder="e.g., 25"
+                    icon={
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                    }
                   />
                 </div>
-              </div>
+              </FormSection>
 
-              {/* Purpose */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Purpose / Objectives <span className="text-red-500">*</span>
-                </label>
-                <textarea
+              <FormSection title="Program Details">
+                <FormTextarea
+                  label="Purpose / Objectives"
                   name="purpose_objectives"
                   value={formData.purpose_objectives}
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
                   placeholder="Describe the purpose and objectives of your program/event..."
                 />
-              </div>
+              </FormSection>
 
-              {/* How did you hear about us */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  How Did You Hear About JECP?
-                </label>
-                <select
+              <FormSection title="Additional Information">
+                <FormSelect
+                  label="How Did You Hear About JECP?"
                   name="heard_about"
                   value={formData.heard_about}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
-                >
-                  <option value="">Select an option</option>
-                  <option value="social-media">Social Media</option>
-                  <option value="website">Website</option>
-                  <option value="referral">Referral</option>
-                  <option value="event">Event</option>
-                  <option value="news">News/Media</option>
-                  <option value="other">Other</option>
-                </select>
+                  options={heardAboutOptions}
+                />
                 {formData.heard_about === 'other' && (
-                  <input
-                    type="text"
+                  <FormInput
+                    label="Please Specify"
                     name="heard_about_other"
                     value={formData.heard_about_other}
                     onChange={handleChange}
-                    placeholder="Please specify"
-                    className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-orange)] focus:border-transparent"
+                    placeholder="How did you hear about us?"
                   />
                 )}
-              </div>
+              </FormSection>
 
-              {/* Consent */}
-              <div>
-                <label className="flex items-start gap-2 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    name="consent_given"
-                    checked={formData.consent_given}
-                    onChange={handleChange}
-                    required
-                    className="w-4 h-4 mt-1 text-[var(--primary-orange)] border-gray-300 rounded focus:ring-[var(--primary-orange)]"
-                  />
-                  <span className="text-sm text-gray-700">
-                    I consent to JECP contacting me regarding my inquiry and providing relevant support and information. <span className="text-red-500">*</span>
-                  </span>
-                </label>
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full py-3 px-6 bg-[var(--primary-orange)] text-white font-semibold rounded-lg hover:bg-[var(--primary-orange-hover)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              <FormConsent
+                name="consent_given"
+                checked={formData.consent_given}
+                onChange={handleChange}
               >
-                {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
-              </button>
+                I consent to JECP contacting me regarding my inquiry and providing relevant support and information.
+                <span className="text-[var(--primary-orange)]"> *</span>
+              </FormConsent>
+
+              <FormSubmitButton
+                isSubmitting={isSubmitting}
+                label="Submit Inquiry"
+                loadingLabel="Submitting..."
+              />
             </form>
-          </div>
+          </FormContainer>
         </div>
       </section>
     </main>

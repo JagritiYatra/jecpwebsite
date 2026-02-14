@@ -12,10 +12,10 @@ const governingBoard = [
   { name: 'Shipra Tripathi', role: 'Treasurer', image: '/images/board/shipra-1.png' },
   { name: 'Shesha Giri Gudipudi', role: 'Member of Society', image: '/images/board/Sheshagiri.png' },
   { name: 'Madhusudan Gopinath', role: 'Member of Society', image: '/images/board/Madhu.png' },
-  { name: 'Surendra Singh', role: 'Member of society', image: '/images/board/Surendra.png' },
-  { name: 'Pranjal Modi', role: 'Member of society', image: '/images/board/Pranjal.png' },
-  { name: 'Mrigank Tripathi', role: 'Member of society', image: '/images/board/Mrigank.png' },
-  { name: 'Neha Tripathi', role: 'Member of society', image: '/images/board/neha.jpg' },
+  { name: 'Surendra Singh', role: 'Member of Society', image: '/images/board/Surendra.png' },
+  { name: 'Pranjal Modi', role: 'Member of Society', image: '/images/board/Pranjal.png' },
+  { name: 'Mrigank Tripathi', role: 'Member of Society', image: '/images/board/Mrigank.png' },
+  { name: 'Neha Tripathi', role: 'Member of Society', image: '/images/board/neha.jpg' },
   { name: 'Sanjeev Kumar Singh', role: 'Member of Society', image: '/images/board/sanjeev-1.png' },
   { name: 'Gauri Tripathi', role: 'Member of Society', image: '/images/board/GauriT.png' },
 ];
@@ -50,7 +50,7 @@ const advisoryBoard = [
 
 const coeChairs = [
   {
-    name: 'Vanita Vishwanath',
+    name: 'Vanita Viswanath',
     role: 'Chairperson - Women CoE',
     description: 'Senior Advisor and Development Leader, Ex-World Bank',
     image: '/images/board/VanitaV.png',
@@ -87,13 +87,13 @@ const coeChairs = [
   },
   {
     name: 'Hemendra Mathur',
-    role: 'Chairperson - Agro COE',
+    role: 'Chairperson - Agro CoE',
     description: 'Venture Partner, Bharat Innovation Fund and ThinkAg',
     image: '/images/board/Hemendra-Mathur.png',
   },
 ];
 
-function MemberCard({ name, role, image, description, variant = 'default' }: {
+function MemberCard({ name, role, image, description }: {
   name: string;
   role: string;
   image: string;
@@ -101,7 +101,7 @@ function MemberCard({ name, role, image, description, variant = 'default' }: {
   variant?: 'default' | 'premium' | 'chair';
 }) {
   return (
-    <div className={`group relative w-[calc(50%-10px)] sm:w-[200px] ${variant === 'premium' ? 'sm:w-[220px]' : ''}`}>
+    <div className="group relative w-[calc(50%-10px)] sm:w-[200px]">
       {/* Elegant outer frame */}
       <div className={`
         relative rounded-2xl overflow-hidden
@@ -112,6 +112,7 @@ function MemberCard({ name, role, image, description, variant = 'default' }: {
         border border-gray-100
         hover:border-[var(--primary-orange)]/30
         hover:-translate-y-2
+        h-full flex flex-col
       `}>
         {/* Golden accent line */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--primary-orange)] via-[var(--primary-orange-light)] to-[var(--primary-orange)]" />
@@ -126,12 +127,7 @@ function MemberCard({ name, role, image, description, variant = 'default' }: {
             <div className="absolute -bottom-1 -right-1 w-4 h-4 border-r-2 border-b-2 border-[var(--primary-orange)]/40 rounded-br" />
 
             {/* Image with elegant border */}
-            <div className={`
-              relative overflow-hidden rounded-xl
-              ${variant === 'premium' ? 'h-[180px] sm:h-[240px]' : 'h-[160px] sm:h-[220px]'}
-              ring-2 ring-gray-100 group-hover:ring-[var(--primary-orange)]/20
-              transition-all duration-500
-            `}>
+            <div className="relative overflow-hidden rounded-xl h-[160px] sm:h-[220px] ring-2 ring-gray-100 group-hover:ring-[var(--primary-orange)]/20 transition-all duration-500">
               <Image
                 src={image}
                 alt={name}
@@ -145,7 +141,7 @@ function MemberCard({ name, role, image, description, variant = 'default' }: {
         </div>
 
         {/* Content area */}
-        <div className="px-4 pb-5 text-center">
+        <div className="px-4 pb-5 text-center flex-1 flex flex-col justify-center">
           <h3 className="text-base font-bold text-[var(--primary-navy)] mb-1 leading-tight">
             {name}
           </h3>

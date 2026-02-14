@@ -157,9 +157,9 @@ const teamSections: TeamSection[] = [
     title: 'Finance',
     members: [
       { name: 'Ashwini Kumar Tiwari', role: 'Finance Director', image: '/images/team/AshwiniTiwari-1.png' },
-      { name: 'Abhishek Bajaj', role: 'Manager – Accounts', image: '/images/team/placeholder.png' },
-      { name: 'Ganesh Singh', role: 'Manager – Finance', image: '/images/team/placeholder.png' },
-      { name: 'Himanshu Dubey', role: 'Asst. Manager – Accounts', image: '/images/team/himanshu-pandey.png' },
+      { name: 'Abhishek Bajaj', role: 'Manager - Accounts', image: '/images/team/placeholder.png' },
+      { name: 'Ganesh Singh', role: 'Manager - Finance', image: '/images/team/placeholder.png' },
+      { name: 'Himanshu Dubey', role: 'Asst. Manager - Accounts', image: '/images/team/himanshu-pandey.png' },
       { name: 'Navneet Pandey', role: 'Accountant', image: '/images/team/navneet-pandey.png' },
     ],
   },
@@ -213,7 +213,7 @@ const teamSections: TeamSection[] = [
 
 function TeamMemberCard({ name, role, image }: TeamMember) {
   return (
-    <div className="group w-[calc(33.333%-14px)] sm:w-[170px]">
+    <div className="group w-[140px] sm:w-[180px]">
       {/* Premium card */}
       <div className={`
         relative rounded-lg sm:rounded-xl overflow-hidden
@@ -224,6 +224,7 @@ function TeamMemberCard({ name, role, image }: TeamMember) {
         border border-gray-100
         hover:border-[var(--primary-orange)]/30
         hover:-translate-y-1.5
+        h-full flex flex-col
       `}>
         {/* Top accent */}
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[var(--primary-orange)] via-[var(--primary-orange-light)] to-[var(--primary-orange)]" />
@@ -238,7 +239,7 @@ function TeamMemberCard({ name, role, image }: TeamMember) {
             <div className="hidden sm:block absolute -bottom-0.5 -right-0.5 w-3 h-3 border-r-[1.5px] border-b-[1.5px] border-[var(--primary-orange)]/30 rounded-br" />
 
             {/* Image */}
-            <div className="relative h-[100px] sm:h-[180px] overflow-hidden rounded-md sm:rounded-lg ring-1 ring-gray-100 group-hover:ring-[var(--primary-orange)]/20 transition-all duration-500">
+            <div className="relative h-[140px] sm:h-[190px] overflow-hidden rounded-md sm:rounded-lg ring-1 ring-gray-100 group-hover:ring-[var(--primary-orange)]/20 transition-all duration-500">
               <Image
                 src={image}
                 alt={name}
@@ -251,11 +252,11 @@ function TeamMemberCard({ name, role, image }: TeamMember) {
         </div>
 
         {/* Content */}
-        <div className="px-1.5 sm:px-3 pb-2 sm:pb-4 text-center">
-          <h3 className="text-[10px] sm:text-sm font-bold text-[var(--primary-navy)] mb-0.5 leading-tight line-clamp-2">
+        <div className="px-1.5 sm:px-3 pb-2 sm:pb-4 text-center flex-1 flex flex-col justify-center">
+          <h3 className="text-xs sm:text-sm font-bold text-[var(--primary-navy)] mb-0.5 leading-tight line-clamp-2">
             {name}
           </h3>
-          <p className="text-[8px] sm:text-xs text-[var(--primary-orange)] font-medium leading-snug line-clamp-1 sm:line-clamp-2">
+          <p className="text-[10px] sm:text-xs text-[var(--primary-orange)] font-medium leading-snug line-clamp-2">
             {role}
           </p>
         </div>

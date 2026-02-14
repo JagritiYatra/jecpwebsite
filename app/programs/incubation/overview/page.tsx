@@ -186,10 +186,10 @@ export default function IncubationOverviewPage() {
             {/* Desktop: Continuous Flow */}
             <div className="hidden lg:block">
               {/* Top Row (1-6) */}
-              <div className="flex justify-between items-center mb-2">
+              <div className="flex justify-between items-stretch mb-2">
                 {journeySteps.slice(0, 6).map((step, i) => (
                   <div key={i} className="flex items-center">
-                    <div className="bg-white rounded-lg px-3 py-2 shadow-md min-w-[140px] text-center">
+                    <div className="bg-white rounded-lg px-3 py-2 shadow-md w-[145px] text-center flex items-center justify-center min-h-[52px]">
                       <span className="text-[var(--primary-orange)] font-bold text-sm">{i + 1}.</span>
                       <span className="text-[var(--primary-navy)] text-xs font-medium ml-1">{step}</span>
                     </div>
@@ -210,10 +210,10 @@ export default function IncubationOverviewPage() {
               </div>
 
               {/* Bottom Row (7-12) - Reversed */}
-              <div className="flex justify-between items-center flex-row-reverse">
+              <div className="flex justify-between items-stretch flex-row-reverse">
                 {journeySteps.slice(6, 12).map((step, i) => (
                   <div key={i} className="flex items-center flex-row-reverse">
-                    <div className="bg-white rounded-lg px-3 py-2 shadow-md min-w-[140px] text-center">
+                    <div className="bg-white rounded-lg px-3 py-2 shadow-md w-[145px] text-center flex items-center justify-center min-h-[52px]">
                       <span className="text-[var(--primary-orange)] font-bold text-sm">{i + 7}.</span>
                       <span className="text-[var(--primary-navy)] text-xs font-medium ml-1">{step}</span>
                     </div>
@@ -332,8 +332,9 @@ export default function IncubationOverviewPage() {
             <div className="w-16 h-0.5 bg-[var(--primary-orange)] mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-            {incubationJourneyCards.map((card, index) => (
+          {/* First row - 4 items */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-3 md:mb-4">
+            {incubationJourneyCards.slice(0, 4).map((card, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:bg-white/20 transition-all duration-200"
@@ -344,6 +345,23 @@ export default function IncubationOverviewPage() {
                 <h3 className="text-white text-sm font-medium leading-tight">{card}</h3>
               </div>
             ))}
+          </div>
+
+          {/* Second row - 3 items centered */}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-3xl w-full">
+              {incubationJourneyCards.slice(4, 7).map((card, index) => (
+                <div
+                  key={index}
+                  className={`bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:bg-white/20 transition-all duration-200 ${index === 2 ? 'col-span-2 lg:col-span-1 max-w-[260px] mx-auto w-full' : ''}`}
+                >
+                  <div className="w-10 h-10 mx-auto mb-2 bg-[var(--primary-orange)] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                    {index + 5}
+                  </div>
+                  <h3 className="text-white text-sm font-medium leading-tight">{card}</h3>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

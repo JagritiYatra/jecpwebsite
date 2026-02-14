@@ -82,7 +82,7 @@ const mentors = [
   },
   {
     name: 'Rajesh Kachroo',
-    role: 'Business Head – University Relations, TeamLease Edtech',
+    role: 'Business Head - University Relations, TeamLease Edtech',
     image: '/images/mentors/Rajesh-Kachroo.png',
   },
   {

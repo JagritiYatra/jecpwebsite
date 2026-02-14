@@ -68,7 +68,7 @@ const videos = [
   },
 ];
 
-function GalleryCard({ item, darkBg = false }: { item: typeof galleryItems[0]; darkBg?: boolean }) {
+function GalleryCard({ item, darkBg = false, onClick }: { item: typeof galleryItems[0]; darkBg?: boolean; onClick: () => void }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -76,6 +76,7 @@ function GalleryCard({ item, darkBg = false }: { item: typeof galleryItems[0]; d
       className="group cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     >
       <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white">
         <Image
@@ -85,6 +86,14 @@ function GalleryCard({ item, darkBg = false }: { item: typeof galleryItems[0]; d
           className={`object-cover transition-transform duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}
         />
         <div className={`absolute inset-0 bg-black/30 transition-opacity duration-300 ${isHovered ? 'opacity-50' : 'opacity-0'}`} />
+        {/* Click to view icon */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+          <div className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
+            <svg className="w-5 h-5 text-[var(--primary-navy)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg>
+          </div>
+        </div>
       </div>
       <h3 className={`mt-3 text-center text-sm md:text-base font-medium ${darkBg ? 'text-white' : 'text-[var(--primary-navy)]'}`}>
         {item.title}
@@ -144,6 +153,8 @@ function VideoCard({ video }: { video: typeof videos[0] }) {
 }
 
 export default function LifeAtJagritiPage() {
+  const [selectedGalleryImage, setSelectedGalleryImage] = useState<typeof galleryItems[0] | null>(null);
+
   return (
     <main>
       {/* Hero Banner */}
@@ -185,7 +196,7 @@ export default function LifeAtJagritiPage() {
           {/* First Row - 4 items */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
             {galleryItems.slice(0, 4).map((item, index) => (
-              <GalleryCard key={index} item={item} darkBg={true} />
+              <GalleryCard key={index} item={item} darkBg={true} onClick={() => setSelectedGalleryImage(item)} />
             ))}
           </div>
 
@@ -193,12 +204,42 @@ export default function LifeAtJagritiPage() {
           <div className="flex justify-center">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl">
               {galleryItems.slice(4, 7).map((item, index) => (
-                <GalleryCard key={index} item={item} darkBg={true} />
+                <GalleryCard key={index} item={item} darkBg={true} onClick={() => setSelectedGalleryImage(item)} />
               ))}
             </div>
           </div>
         </div>
       </section>
+
+      {/* Gallery Lightbox Modal */}
+      {selectedGalleryImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          onClick={() => setSelectedGalleryImage(null)}
+        >
+          <button
+            className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white text-2xl transition-colors z-10"
+            onClick={() => setSelectedGalleryImage(null)}
+          >
+            &times;
+          </button>
+          <div className="relative max-w-4xl max-h-[85vh] w-full h-full">
+            <Image
+              src={selectedGalleryImage.image}
+              alt={selectedGalleryImage.title}
+              fill
+              className="object-contain"
+              quality={100}
+            />
+          </div>
+          <p className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-base font-medium">
+            {selectedGalleryImage.title}
+          </p>
+          <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white/50 text-sm">
+            Click anywhere to close
+          </p>
+        </div>
+      )}
 
       {/* Our Videos Section */}
       <section className="py-12 md:py-16 px-4 bg-white">

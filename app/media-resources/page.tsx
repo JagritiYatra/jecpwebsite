@@ -19,7 +19,6 @@ const publications = [
   { title: 'The Banyan Revolution', image: '/images/media-resources/publications/banyan-revolution.png', pdf: '/pdfs/media-resources/banyan-revolution-case-study.pdf' },
   { title: 'Digital For Dignity', image: '/images/media-resources/publications/digital-for-dignity.png', pdf: '/pdfs/media-resources/digital-for-dignity.pdf' },
   { title: 'Business Incubation Units', image: '/images/media-resources/publications/business-incubation.png', pdf: '/pdfs/media-resources/business-incubation-units.pdf' },
-  { title: 'Investing in Women', image: '/images/media-resources/publications/roots-to-wings.png', link: 'https://www.impriindia.com/insights/women-local-communities-economy/' },
 ];
 
 // Newsletters
@@ -242,11 +241,11 @@ export default function MediaResourcesPage() {
             Our Publications
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
             {publications.map((pub, index) => (
               <a
                 key={index}
-                href={pub.pdf || pub.link || '#'}
+                href={pub.pdf || '#'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group text-center"

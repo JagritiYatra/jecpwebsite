@@ -4,50 +4,33 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useCallback, useEffect } from 'react';
 
-// Gallery data with multiple images per section
-const galleryItems = [
-  {
-    title: 'Jagriti 25th Foundation Day',
-    thumbnail: '/images/life-at-jagriti/foundation-day.jpg',
-    folder: 'foundation-day',
-    count: 22,
-  },
-  {
-    title: '1st Cohort Graduation Ceremony',
-    thumbnail: '/images/life-at-jagriti/graduation-ceremony.jpg',
-    folder: 'graduation',
-    count: 6,
-  },
-  {
-    title: 'Accounting Professionals Program Launch',
-    thumbnail: '/images/life-at-jagriti/accounting-program.jpg',
-    folder: 'accounting',
-    count: 24,
-  },
-  {
-    title: 'Green Incubation Program Launch',
-    thumbnail: '/images/life-at-jagriti/green-incubation.jpg',
-    folder: 'green-incubation',
-    count: 7,
-  },
-  {
-    title: 'Induction Program',
-    thumbnail: '/images/life-at-jagriti/induction-program.jpg',
-    folder: 'induction',
-    count: 8,
-  },
-  {
-    title: 'Jagriti Yuva Samvad with Shiv Khera',
-    thumbnail: '/images/life-at-jagriti/yuva-samvad.jpg',
-    folder: 'yuva-samvad',
-    count: 12,
-  },
-  {
-    title: 'Tech Shakti Sri Cohort Launch',
-    thumbnail: '/images/life-at-jagriti/tech-shakti.jpg',
-    folder: 'tech-shakti',
-    count: 11,
-  },
+// Gallery cards shown on top (same images & captions as live site)
+const galleryCards = [
+  { title: 'Jagriti 25th Foundation Day', image: '/images/life-at-jagriti/foundation-day.jpg' },
+  { title: '1st Cohort Graduation Ceremony', image: '/images/life-at-jagriti/graduation-ceremony.jpg' },
+  { title: 'Accounting Professionals Program Launch', image: '/images/life-at-jagriti/accounting-program.jpg' },
+  { title: 'Green Incubation Program Launch', image: '/images/life-at-jagriti/green-incubation.jpg' },
+  { title: 'Induction Program', image: '/images/life-at-jagriti/induction-program.jpg' },
+  { title: 'Jagriti Yuva Samvad with Shiv Khera', image: '/images/life-at-jagriti/yuva-samvad.jpg' },
+  { title: 'Tech Shakti Sri Cohort Launch', image: '/images/life-at-jagriti/tech-shakti.jpg' },
+];
+
+// ALL gallery images combined into one single gallery
+const allGalleryImages: string[] = [
+  // Foundation Day (22)
+  ...Array.from({ length: 22 }, (_, i) => `/images/life-at-jagriti/foundation-day/${i + 1}.jpg`),
+  // Graduation Ceremony (6)
+  ...Array.from({ length: 6 }, (_, i) => `/images/life-at-jagriti/graduation/${i + 1}.jpg`),
+  // Accounting Program (24)
+  ...Array.from({ length: 24 }, (_, i) => `/images/life-at-jagriti/accounting/${i + 1}.jpg`),
+  // Green Incubation (7)
+  ...Array.from({ length: 7 }, (_, i) => `/images/life-at-jagriti/green-incubation/${i + 1}.jpg`),
+  // Induction Program (8)
+  ...Array.from({ length: 8 }, (_, i) => `/images/life-at-jagriti/induction/${i + 1}.jpg`),
+  // Yuva Samvad (12)
+  ...Array.from({ length: 12 }, (_, i) => `/images/life-at-jagriti/yuva-samvad/${i + 1}.jpg`),
+  // Tech Shakti (11)
+  ...Array.from({ length: 11 }, (_, i) => `/images/life-at-jagriti/tech-shakti/${i + 1}.jpg`),
 ];
 
 // YouTube video data
@@ -61,12 +44,7 @@ const videos = [
   { id: 'V3vYJQ6hfjo', title: 'Women of Purvanchal' },
 ];
 
-// Generate image paths for a gallery section
-function getGalleryImages(folder: string, count: number): string[] {
-  return Array.from({ length: count }, (_, i) => `/images/life-at-jagriti/${folder}/${i + 1}.jpg`);
-}
-
-function GalleryCard({ item, onClick }: { item: typeof galleryItems[0]; onClick: () => void }) {
+function GalleryCard({ item, onClick }: { item: typeof galleryCards[0]; onClick: () => void }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -78,20 +56,12 @@ function GalleryCard({ item, onClick }: { item: typeof galleryItems[0]; onClick:
     >
       <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white">
         <Image
-          src={item.thumbnail}
+          src={item.image}
           alt={item.title}
           fill
           className={`object-cover transition-transform duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}
         />
         <div className={`absolute inset-0 bg-black/30 transition-opacity duration-300 ${isHovered ? 'opacity-50' : 'opacity-0'}`} />
-        {/* Photo count badge */}
-        <div className="absolute top-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
-          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          {item.count}
-        </div>
-        {/* Click to view overlay */}
         <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
           <div className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
             <svg className="w-5 h-5 text-[var(--primary-navy)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,15 +77,7 @@ function GalleryCard({ item, onClick }: { item: typeof galleryItems[0]; onClick:
   );
 }
 
-function GalleryLightbox({
-  title,
-  images,
-  onClose,
-}: {
-  title: string;
-  images: string[];
-  onClose: () => void;
-}) {
+function GalleryLightbox({ images, onClose }: { images: string[]; onClose: () => void }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showThumbnails, setShowThumbnails] = useState(true);
 
@@ -127,7 +89,6 @@ function GalleryLightbox({
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   }, [images.length]);
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight') goNext();
@@ -142,7 +103,7 @@ function GalleryLightbox({
     <div className="fixed inset-0 z-50 bg-black/95 flex flex-col" onClick={onClose}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 bg-black/50" onClick={(e) => e.stopPropagation()}>
-        <h3 className="text-white font-medium text-sm md:text-base truncate pr-4">{title}</h3>
+        <h3 className="text-white font-medium text-sm md:text-base">Life@Jagriti Gallery</h3>
         <div className="flex items-center gap-3 flex-shrink-0">
           <span className="text-white/70 text-sm">
             {currentIndex + 1} / {images.length}
@@ -164,7 +125,6 @@ function GalleryLightbox({
 
       {/* Main Image Area */}
       <div className="flex-1 relative flex items-center justify-center min-h-0 px-12 md:px-16" onClick={onClose}>
-        {/* Previous Button */}
         <button
           className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/25 rounded-full flex items-center justify-center text-white transition-colors"
           onClick={(e) => { e.stopPropagation(); goPrev(); }}
@@ -174,14 +134,10 @@ function GalleryLightbox({
           </svg>
         </button>
 
-        {/* Image */}
-        <div
-          className="relative w-full h-full max-w-5xl"
-          onClick={(e) => e.stopPropagation()}
-        >
+        <div className="relative w-full h-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
           <Image
             src={images[currentIndex]}
-            alt={`${title} - Photo ${currentIndex + 1}`}
+            alt={`Gallery Photo ${currentIndex + 1}`}
             fill
             className="object-contain"
             quality={95}
@@ -189,7 +145,6 @@ function GalleryLightbox({
           />
         </div>
 
-        {/* Next Button */}
         <button
           className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/25 rounded-full flex items-center justify-center text-white transition-colors"
           onClick={(e) => { e.stopPropagation(); goNext(); }}
@@ -202,10 +157,7 @@ function GalleryLightbox({
 
       {/* Thumbnail Strip */}
       {showThumbnails && (
-        <div
-          className="bg-black/70 px-4 py-3 overflow-x-auto"
-          onClick={(e) => e.stopPropagation()}
-        >
+        <div className="bg-black/70 px-4 py-3 overflow-x-auto" onClick={(e) => e.stopPropagation()}>
           <div className="flex gap-2 justify-start max-w-5xl mx-auto">
             {images.map((img, index) => (
               <button
@@ -217,13 +169,7 @@ function GalleryLightbox({
                 }`}
                 onClick={() => setCurrentIndex(index)}
               >
-                <Image
-                  src={img}
-                  alt={`Thumbnail ${index + 1}`}
-                  fill
-                  className="object-cover"
-                  sizes="64px"
-                />
+                <Image src={img} alt={`Thumbnail ${index + 1}`} fill className="object-cover" sizes="64px" />
               </button>
             ))}
           </div>
@@ -277,7 +223,7 @@ function VideoCard({ video }: { video: typeof videos[0] }) {
 }
 
 export default function LifeAtJagritiPage() {
-  const [openGallery, setOpenGallery] = useState<typeof galleryItems[0] | null>(null);
+  const [galleryOpen, setGalleryOpen] = useState(false);
 
   return (
     <main>
@@ -313,34 +259,36 @@ export default function LifeAtJagritiPage() {
       {/* Our Gallery Section */}
       <section className="py-12 md:py-16 px-4 bg-[var(--primary-navy)]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
             Our Gallery
           </h2>
+          <p className="text-white/50 text-center text-sm mb-10">
+            {allGalleryImages.length} photos &bull; Click any image to browse
+          </p>
 
           {/* First Row - 4 items */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
-            {galleryItems.slice(0, 4).map((item, index) => (
-              <GalleryCard key={index} item={item} onClick={() => setOpenGallery(item)} />
+            {galleryCards.slice(0, 4).map((item, index) => (
+              <GalleryCard key={index} item={item} onClick={() => setGalleryOpen(true)} />
             ))}
           </div>
 
           {/* Second Row - 3 items centered */}
           <div className="flex justify-center">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl">
-              {galleryItems.slice(4, 7).map((item, index) => (
-                <GalleryCard key={index} item={item} onClick={() => setOpenGallery(item)} />
+              {galleryCards.slice(4, 7).map((item, index) => (
+                <GalleryCard key={index} item={item} onClick={() => setGalleryOpen(true)} />
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gallery Lightbox with Slider */}
-      {openGallery && (
+      {/* Single Gallery Lightbox for ALL photos */}
+      {galleryOpen && (
         <GalleryLightbox
-          title={openGallery.title}
-          images={getGalleryImages(openGallery.folder, openGallery.count)}
-          onClose={() => setOpenGallery(null)}
+          images={allGalleryImages}
+          onClose={() => setGalleryOpen(false)}
         />
       )}
 

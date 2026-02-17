@@ -52,13 +52,13 @@ const corePillars = [
 
 // Centres of Excellence data
 const centresOfExcellence = [
-  { name: 'Women', image: '/images/programs/innovation/women-coe.jpg' },
-  { name: 'Bioregional', image: '/images/programs/innovation/bioregional-coe.jpg' },
-  { name: 'Digital', image: '/images/programs/innovation/digital-coe.png' },
-  { name: 'Handicrafts & Apparel', image: '/images/programs/innovation/handicrafts-coe.png' },
-  { name: 'Agro', image: '/images/programs/innovation/agro-coe.png' },
-  { name: 'Healthcare', image: '/images/programs/innovation/healthcare-coe.png' },
-  { name: 'Urbanization', image: '/images/programs/innovation/urbanization-coe.png' },
+  { name: 'Women', image: '/images/programs/innovation/women-coe.jpg', href: '/programs/innovation/women-coe' },
+  { name: 'Bioregional', image: '/images/programs/innovation/bioregional-coe.jpg', href: null },
+  { name: 'Digital', image: '/images/programs/innovation/digital-coe.png', href: null },
+  { name: 'Handicrafts & Apparel', image: '/images/programs/innovation/handicrafts-coe.png', href: null },
+  { name: 'Agro', image: '/images/programs/innovation/agro-coe.png', href: null },
+  { name: 'Healthcare', image: '/images/programs/innovation/healthcare-coe.png', href: null },
+  { name: 'Urbanization', image: '/images/programs/innovation/urbanization-coe.png', href: null },
 ];
 
 function PillarAccordion({ pillar }: { pillar: typeof corePillars[0] }) {
@@ -207,29 +207,11 @@ export default function InnovationPage() {
 
           {/* First Row - 4 items */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8">
-            {centresOfExcellence.slice(0, 4).map((coe, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-xl p-3 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <Image
-                  src={coe.image}
-                  alt={coe.name}
-                  width={300}
-                  height={150}
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Second Row - 3 items centered */}
-          <div className="flex justify-center">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl">
-              {centresOfExcellence.slice(4, 7).map((coe, index) => (
+            {centresOfExcellence.slice(0, 4).map((coe, index) => {
+              const card = (
                 <div
                   key={index}
-                  className="group bg-white rounded-xl p-3 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                  className={`group bg-white rounded-xl p-3 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${coe.href ? 'cursor-pointer' : ''}`}
                 >
                   <Image
                     src={coe.image}
@@ -239,7 +221,31 @@ export default function InnovationPage() {
                     className="w-full h-auto object-contain"
                   />
                 </div>
-              ))}
+              );
+              return coe.href ? <Link key={index} href={coe.href}>{card}</Link> : card;
+            })}
+          </div>
+
+          {/* Second Row - 3 items centered */}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl">
+              {centresOfExcellence.slice(4, 7).map((coe, index) => {
+                const card = (
+                  <div
+                    key={index}
+                    className={`group bg-white rounded-xl p-3 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${coe.href ? 'cursor-pointer' : ''}`}
+                  >
+                    <Image
+                      src={coe.image}
+                      alt={coe.name}
+                      width={300}
+                      height={150}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                );
+                return coe.href ? <Link key={index} href={coe.href}>{card}</Link> : card;
+              })}
             </div>
           </div>
         </div>

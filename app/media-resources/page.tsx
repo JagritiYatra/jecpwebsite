@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 // Books by Founder
 const books = [
@@ -58,109 +58,167 @@ const newsGalleryImages = [
   'wa-oct16.jpeg', 'wa-oct20-1.jpeg', 'wa-oct20-2.jpeg',
 ];
 
-function LightboxGallery() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
-  const [isPaused, setIsPaused] = useState(false);
+const IMAGES_PER_PAGE = 12;
 
-  // Split images into rows
-  const itemsPerRow = 12;
-  const rows: string[][] = [];
-  for (let i = 0; i < newsGalleryImages.length; i += itemsPerRow) {
-    rows.push(newsGalleryImages.slice(i, i + itemsPerRow));
-  }
+function NewsGallery() {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [currentPage, setCurrentPage] = useState(0);
+  const totalPages = Math.ceil(newsGalleryImages.length / IMAGES_PER_PAGE);
+  const currentImages = newsGalleryImages.slice(
+    currentPage * IMAGES_PER_PAGE,
+    (currentPage + 1) * IMAGES_PER_PAGE
+  );
 
-  // Duplicate images for seamless loop
-  const duplicatedRows = rows.map(row => [...row, ...row]);
+  const goNext = useCallback(() => {
+    if (selectedIndex === null) return;
+    setSelectedIndex((prev) => (prev! + 1) % newsGalleryImages.length);
+  }, [selectedIndex]);
+
+  const goPrev = useCallback(() => {
+    if (selectedIndex === null) return;
+    setSelectedIndex((prev) => (prev! - 1 + newsGalleryImages.length) % newsGalleryImages.length);
+  }, [selectedIndex]);
+
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') goNext();
+      else if (e.key === 'ArrowLeft') goPrev();
+      else if (e.key === 'Escape') setSelectedIndex(null);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedIndex, goNext, goPrev]);
 
   return (
     <>
-      {/* Infinite Scroll Gallery */}
-      <div
-        className="space-y-4 overflow-hidden relative"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => {
-          setIsPaused(false);
-          setHoveredImage(null);
-        }}
-      >
-        {duplicatedRows.map((row, rowIndex) => (
-          <div
-            key={rowIndex}
-            className="relative overflow-hidden"
-          >
+      {/* Static Grid Gallery */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
+        {currentImages.map((img, idx) => {
+          const globalIndex = currentPage * IMAGES_PER_PAGE + idx;
+          return (
             <div
-              className={`flex gap-3 w-max ${isPaused ? '' : rowIndex % 2 === 0 ? 'animate-scroll-left' : 'animate-scroll-right'}`}
-              style={{
-                animationPlayState: isPaused ? 'paused' : 'running',
-              }}
+              key={img}
+              className="relative aspect-[3/4] rounded-lg overflow-hidden cursor-pointer group bg-gray-100 shadow-sm hover:shadow-lg transition-shadow duration-300"
+              onClick={() => setSelectedIndex(globalIndex)}
             >
-              {row.map((img, imgIndex) => (
-                <div
-                  key={imgIndex}
-                  className="relative w-28 h-36 md:w-32 md:h-44 flex-shrink-0 cursor-pointer group overflow-visible"
-                  onMouseEnter={() => setHoveredImage(img)}
-                  onMouseLeave={() => setHoveredImage(null)}
-                  onClick={() => setSelectedImage(img)}
-                >
-                  <div className="relative w-full h-full rounded border-2 border-[var(--primary-navy)] shadow-md overflow-hidden bg-white">
-                    <Image
-                      src={`/images/media-resources/news-gallery/${img}`}
-                      alt={`News ${imgIndex + 1}`}
-                      fill
-                      sizes="(max-width: 768px) 112px, 128px"
-                      className="object-cover"
-                      quality={90}
-                    />
-                  </div>
+              <Image
+                src={`/images/media-resources/news-gallery/${img}`}
+                alt={`News Gallery ${globalIndex + 1}`}
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="w-9 h-9 bg-white/90 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[var(--primary-navy)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                  </svg>
                 </div>
-              ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Pagination */}
+      <div className="flex items-center justify-center gap-2 mt-8">
+        <button
+          className="px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          onClick={() => setCurrentPage((p) => p - 1)}
+          disabled={currentPage === 0}
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        {Array.from({ length: totalPages }, (_, i) => (
+          <button
+            key={i}
+            className={`w-9 h-9 rounded-lg text-sm font-medium transition-colors ${
+              i === currentPage
+                ? 'bg-[var(--primary-navy)] text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            }`}
+            onClick={() => setCurrentPage(i)}
+          >
+            {i + 1}
+          </button>
+        ))}
+        <button
+          className="px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          onClick={() => setCurrentPage((p) => p + 1)}
+          disabled={currentPage === totalPages - 1}
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      <p className="text-center text-gray-400 text-xs mt-3">
+        Showing {currentPage * IMAGES_PER_PAGE + 1}-{Math.min((currentPage + 1) * IMAGES_PER_PAGE, newsGalleryImages.length)} of {newsGalleryImages.length} photos
+      </p>
+
+      {/* Lightbox with Slider */}
+      {selectedIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex flex-col"
+          onClick={() => setSelectedIndex(null)}
+        >
+          {/* Header */}
+          <div className="flex items-center justify-between px-4 py-3 bg-black/50" onClick={(e) => e.stopPropagation()}>
+            <h3 className="text-white font-medium text-sm md:text-base">News Gallery</h3>
+            <div className="flex items-center gap-3">
+              <span className="text-white/70 text-sm">
+                {selectedIndex + 1} / {newsGalleryImages.length}
+              </span>
+              <button
+                className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white text-xl transition-colors"
+                onClick={() => setSelectedIndex(null)}
+              >
+                &times;
+              </button>
             </div>
           </div>
-        ))}
 
-        {/* Zoomed Image Preview on Hover */}
-        {hoveredImage && (
-          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 pointer-events-none">
-            <div className="relative w-72 h-96 md:w-80 md:h-[28rem] rounded-lg border-4 border-[var(--primary-orange)] shadow-2xl overflow-hidden bg-white animate-fade-in">
+          {/* Main Image */}
+          <div className="flex-1 relative flex items-center justify-center min-h-0 px-12 md:px-16" onClick={() => setSelectedIndex(null)}>
+            <button
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/25 rounded-full flex items-center justify-center text-white transition-colors"
+              onClick={(e) => { e.stopPropagation(); goPrev(); }}
+            >
+              <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <div className="relative w-full h-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
               <Image
-                src={`/images/media-resources/news-gallery/${hoveredImage}`}
-                alt="Preview"
+                src={`/images/media-resources/news-gallery/${newsGalleryImages[selectedIndex]}`}
+                alt={`News Gallery ${selectedIndex + 1}`}
                 fill
-                sizes="320px"
                 className="object-contain"
                 quality={100}
                 priority
               />
             </div>
-          </div>
-        )}
-      </div>
 
-      {/* Lightbox Modal */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white text-2xl transition-colors z-10"
-            onClick={() => setSelectedImage(null)}
-          >
-            &times;
-          </button>
-          <div className="relative max-w-4xl max-h-[85vh] w-full h-full">
-            <Image
-              src={`/images/media-resources/news-gallery/${selectedImage}`}
-              alt="News Gallery"
-              fill
-              className="object-contain"
-              quality={100}
-            />
+            <button
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/25 rounded-full flex items-center justify-center text-white transition-colors"
+              onClick={(e) => { e.stopPropagation(); goNext(); }}
+            >
+              <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
-          <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm">
-            Click anywhere to close
-          </p>
+
+          {/* Bottom info */}
+          <div className="bg-black/50 px-4 py-2 text-center" onClick={(e) => e.stopPropagation()}>
+            <p className="text-white/50 text-xs">Use arrow keys to navigate &bull; Press Esc to close</p>
+          </div>
         </div>
       )}
     </>
@@ -347,14 +405,14 @@ export default function MediaResourcesPage() {
       </section>
 
       {/* News Gallery */}
-      <section className="py-12 md:py-16 px-4 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-navy)] text-center mb-3">
+      <section className="py-12 md:py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-navy)] text-center mb-2">
             News Gallery
           </h2>
-          <p className="text-gray-500 text-center text-sm mb-10">Hover to pause • Click any image to view full size</p>
+          <p className="text-gray-400 text-center text-sm mb-8">Click any image to view full size</p>
 
-          <LightboxGallery />
+          <NewsGallery />
         </div>
       </section>
     </main>

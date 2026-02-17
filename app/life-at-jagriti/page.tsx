@@ -2,73 +2,71 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
-// Gallery data
+// Gallery data with multiple images per section
 const galleryItems = [
   {
     title: 'Jagriti 25th Foundation Day',
-    image: '/images/life-at-jagriti/foundation-day.jpg',
+    thumbnail: '/images/life-at-jagriti/foundation-day.jpg',
+    folder: 'foundation-day',
+    count: 22,
   },
   {
     title: '1st Cohort Graduation Ceremony',
-    image: '/images/life-at-jagriti/graduation-ceremony.jpg',
+    thumbnail: '/images/life-at-jagriti/graduation-ceremony.jpg',
+    folder: 'graduation',
+    count: 6,
   },
   {
     title: 'Accounting Professionals Program Launch',
-    image: '/images/life-at-jagriti/accounting-program.jpg',
+    thumbnail: '/images/life-at-jagriti/accounting-program.jpg',
+    folder: 'accounting',
+    count: 24,
   },
   {
     title: 'Green Incubation Program Launch',
-    image: '/images/life-at-jagriti/green-incubation.jpg',
+    thumbnail: '/images/life-at-jagriti/green-incubation.jpg',
+    folder: 'green-incubation',
+    count: 7,
   },
   {
     title: 'Induction Program',
-    image: '/images/life-at-jagriti/induction-program.jpg',
+    thumbnail: '/images/life-at-jagriti/induction-program.jpg',
+    folder: 'induction',
+    count: 8,
   },
   {
     title: 'Jagriti Yuva Samvad with Shiv Khera',
-    image: '/images/life-at-jagriti/yuva-samvad.jpg',
+    thumbnail: '/images/life-at-jagriti/yuva-samvad.jpg',
+    folder: 'yuva-samvad',
+    count: 12,
   },
   {
     title: 'Tech Shakti Sri Cohort Launch',
-    image: '/images/life-at-jagriti/tech-shakti.jpg',
+    thumbnail: '/images/life-at-jagriti/tech-shakti.jpg',
+    folder: 'tech-shakti',
+    count: 11,
   },
 ];
 
 // YouTube video data
 const videos = [
-  {
-    id: '1Lr19su6SFc',
-    title: 'Jagriti 25 Years Journey',
-  },
-  {
-    id: 'FnHnUBy5Apw',
-    title: 'Catalysing Sustainability',
-  },
-  {
-    id: 'ah1RHRTvJXY',
-    title: 'Jagriti Ki Dekhbhal',
-  },
-  {
-    id: 'lNsDV40Wdmc',
-    title: 'Jagriti Udyam Kendra',
-  },
-  {
-    id: 'T9IPYm5zTeg',
-    title: 'Tech Shakti Rural Women',
-  },
-  {
-    id: 'Mqs53HY09BM',
-    title: 'DM Divya Mittal Visit',
-  },
-  {
-    id: 'V3vYJQ6hfjo',
-    title: 'Women of Purvanchal',
-  },
+  { id: '1Lr19su6SFc', title: 'Jagriti 25 Years Journey' },
+  { id: 'FnHnUBy5Apw', title: 'Catalysing Sustainability' },
+  { id: 'ah1RHRTvJXY', title: 'Jagriti Ki Dekhbhal' },
+  { id: 'lNsDV40Wdmc', title: 'Jagriti Udyam Kendra' },
+  { id: 'T9IPYm5zTeg', title: 'Tech Shakti Rural Women' },
+  { id: 'Mqs53HY09BM', title: 'DM Divya Mittal Visit' },
+  { id: 'V3vYJQ6hfjo', title: 'Women of Purvanchal' },
 ];
 
-function GalleryCard({ item, darkBg = false, onClick }: { item: typeof galleryItems[0]; darkBg?: boolean; onClick: () => void }) {
+// Generate image paths for a gallery section
+function getGalleryImages(folder: string, count: number): string[] {
+  return Array.from({ length: count }, (_, i) => `/images/life-at-jagriti/${folder}/${i + 1}.jpg`);
+}
+
+function GalleryCard({ item, onClick }: { item: typeof galleryItems[0]; onClick: () => void }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -80,13 +78,20 @@ function GalleryCard({ item, darkBg = false, onClick }: { item: typeof galleryIt
     >
       <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white">
         <Image
-          src={item.image}
+          src={item.thumbnail}
           alt={item.title}
           fill
           className={`object-cover transition-transform duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}
         />
         <div className={`absolute inset-0 bg-black/30 transition-opacity duration-300 ${isHovered ? 'opacity-50' : 'opacity-0'}`} />
-        {/* Click to view icon */}
+        {/* Photo count badge */}
+        <div className="absolute top-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          {item.count}
+        </div>
+        {/* Click to view overlay */}
         <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
           <div className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
             <svg className="w-5 h-5 text-[var(--primary-navy)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,9 +100,135 @@ function GalleryCard({ item, darkBg = false, onClick }: { item: typeof galleryIt
           </div>
         </div>
       </div>
-      <h3 className={`mt-3 text-center text-sm md:text-base font-medium ${darkBg ? 'text-white' : 'text-[var(--primary-navy)]'}`}>
+      <h3 className="mt-3 text-center text-sm md:text-base font-medium text-white">
         {item.title}
       </h3>
+    </div>
+  );
+}
+
+function GalleryLightbox({
+  title,
+  images,
+  onClose,
+}: {
+  title: string;
+  images: string[];
+  onClose: () => void;
+}) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showThumbnails, setShowThumbnails] = useState(true);
+
+  const goNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  }, [images.length]);
+
+  const goPrev = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  }, [images.length]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') goNext();
+      else if (e.key === 'ArrowLeft') goPrev();
+      else if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [goNext, goPrev, onClose]);
+
+  return (
+    <div className="fixed inset-0 z-50 bg-black/95 flex flex-col" onClick={onClose}>
+      {/* Header */}
+      <div className="flex items-center justify-between px-4 py-3 bg-black/50" onClick={(e) => e.stopPropagation()}>
+        <h3 className="text-white font-medium text-sm md:text-base truncate pr-4">{title}</h3>
+        <div className="flex items-center gap-3 flex-shrink-0">
+          <span className="text-white/70 text-sm">
+            {currentIndex + 1} / {images.length}
+          </span>
+          <button
+            className="text-white/60 hover:text-white text-sm transition-colors"
+            onClick={() => setShowThumbnails(!showThumbnails)}
+          >
+            {showThumbnails ? 'Hide' : 'Show'} Thumbnails
+          </button>
+          <button
+            className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white text-xl transition-colors"
+            onClick={onClose}
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+
+      {/* Main Image Area */}
+      <div className="flex-1 relative flex items-center justify-center min-h-0 px-12 md:px-16" onClick={onClose}>
+        {/* Previous Button */}
+        <button
+          className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/25 rounded-full flex items-center justify-center text-white transition-colors"
+          onClick={(e) => { e.stopPropagation(); goPrev(); }}
+        >
+          <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        {/* Image */}
+        <div
+          className="relative w-full h-full max-w-5xl"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Image
+            src={images[currentIndex]}
+            alt={`${title} - Photo ${currentIndex + 1}`}
+            fill
+            className="object-contain"
+            quality={95}
+            priority
+          />
+        </div>
+
+        {/* Next Button */}
+        <button
+          className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/25 rounded-full flex items-center justify-center text-white transition-colors"
+          onClick={(e) => { e.stopPropagation(); goNext(); }}
+        >
+          <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Thumbnail Strip */}
+      {showThumbnails && (
+        <div
+          className="bg-black/70 px-4 py-3 overflow-x-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex gap-2 justify-start max-w-5xl mx-auto">
+            {images.map((img, index) => (
+              <button
+                key={index}
+                className={`relative w-14 h-14 md:w-16 md:h-16 flex-shrink-0 rounded overflow-hidden transition-all duration-200 ${
+                  index === currentIndex
+                    ? 'ring-2 ring-[var(--primary-orange)] opacity-100'
+                    : 'opacity-50 hover:opacity-80'
+                }`}
+                onClick={() => setCurrentIndex(index)}
+              >
+                <Image
+                  src={img}
+                  alt={`Thumbnail ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  sizes="64px"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -122,18 +253,13 @@ function VideoCard({ video }: { video: typeof videos[0] }) {
           className="relative aspect-video rounded-lg overflow-hidden cursor-pointer group"
           onClick={() => setShowVideo(true)}
         >
-          {/* YouTube Thumbnail */}
           <Image
             src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
             alt={video.title}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-300"
           />
-
-          {/* Overlay */}
           <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
-
-          {/* Play Button */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-14 h-14 md:w-16 md:h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
               <svg className="w-6 h-6 md:w-8 md:h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
@@ -141,8 +267,6 @@ function VideoCard({ video }: { video: typeof videos[0] }) {
               </svg>
             </div>
           </div>
-
-          {/* Title Overlay */}
           <div className="absolute top-0 left-0 right-0 p-2 bg-gradient-to-b from-black/60 to-transparent">
             <p className="text-white text-xs md:text-sm font-medium truncate">{video.title}</p>
           </div>
@@ -153,7 +277,7 @@ function VideoCard({ video }: { video: typeof videos[0] }) {
 }
 
 export default function LifeAtJagritiPage() {
-  const [selectedGalleryImage, setSelectedGalleryImage] = useState<typeof galleryItems[0] | null>(null);
+  const [openGallery, setOpenGallery] = useState<typeof galleryItems[0] | null>(null);
 
   return (
     <main>
@@ -196,7 +320,7 @@ export default function LifeAtJagritiPage() {
           {/* First Row - 4 items */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
             {galleryItems.slice(0, 4).map((item, index) => (
-              <GalleryCard key={index} item={item} darkBg={true} onClick={() => setSelectedGalleryImage(item)} />
+              <GalleryCard key={index} item={item} onClick={() => setOpenGallery(item)} />
             ))}
           </div>
 
@@ -204,41 +328,20 @@ export default function LifeAtJagritiPage() {
           <div className="flex justify-center">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl">
               {galleryItems.slice(4, 7).map((item, index) => (
-                <GalleryCard key={index} item={item} darkBg={true} onClick={() => setSelectedGalleryImage(item)} />
+                <GalleryCard key={index} item={item} onClick={() => setOpenGallery(item)} />
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gallery Lightbox Modal */}
-      {selectedGalleryImage && (
-        <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
-          onClick={() => setSelectedGalleryImage(null)}
-        >
-          <button
-            className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white text-2xl transition-colors z-10"
-            onClick={() => setSelectedGalleryImage(null)}
-          >
-            &times;
-          </button>
-          <div className="relative max-w-4xl max-h-[85vh] w-full h-full">
-            <Image
-              src={selectedGalleryImage.image}
-              alt={selectedGalleryImage.title}
-              fill
-              className="object-contain"
-              quality={100}
-            />
-          </div>
-          <p className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-base font-medium">
-            {selectedGalleryImage.title}
-          </p>
-          <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white/50 text-sm">
-            Click anywhere to close
-          </p>
-        </div>
+      {/* Gallery Lightbox with Slider */}
+      {openGallery && (
+        <GalleryLightbox
+          title={openGallery.title}
+          images={getGalleryImages(openGallery.folder, openGallery.count)}
+          onClose={() => setOpenGallery(null)}
+        />
       )}
 
       {/* Our Videos Section */}

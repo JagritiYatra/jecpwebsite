@@ -4,15 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useCallback, useEffect } from 'react';
 
-// Gallery cards shown on top (same images & captions as live site)
+// Gallery cards shown on top (matched to live site photos & captions)
 const galleryCards = [
-  { title: 'Jagriti 25th Foundation Day', image: '/images/life-at-jagriti/foundation-day.jpg' },
-  { title: '1st Cohort Graduation Ceremony', image: '/images/life-at-jagriti/graduation-ceremony.jpg' },
-  { title: 'Accounting Professionals Program Launch', image: '/images/life-at-jagriti/accounting-program.jpg' },
-  { title: 'Green Incubation Program Launch', image: '/images/life-at-jagriti/green-incubation.jpg' },
-  { title: 'Induction Program', image: '/images/life-at-jagriti/induction-program.jpg' },
-  { title: 'Jagriti Yuva Samvad with Shiv Khera', image: '/images/life-at-jagriti/yuva-samvad.jpg' },
-  { title: 'Tech Shakti Sri Cohort Launch', image: '/images/life-at-jagriti/tech-shakti.jpg' },
+  { title: 'Jagriti 25th Foundation Day', image: '/images/life-at-jagriti/foundation-day-thumb.png' },
+  { title: '1st Cohort Graduation Ceremony', image: '/images/life-at-jagriti/graduation-thumb.jpg' },
+  { title: 'Accounting Professionals Program Launch', image: '/images/life-at-jagriti/accounting-thumb.jpg' },
+  { title: 'Green Incubation Program Launch', image: '/images/life-at-jagriti/green-incubation-thumb.jpg' },
+  { title: 'Induction Program', image: '/images/life-at-jagriti/induction-thumb.jpg' },
+  { title: 'Jagriti Yuva Samvad with Shiv Khera', image: '/images/life-at-jagriti/yuva-samvad-thumb.jpg' },
+  { title: 'Tech Shakti Sri Cohort Launch', image: '/images/life-at-jagriti/tech-shakti-thumb.jpg' },
 ];
 
 // ALL gallery images combined into one single gallery

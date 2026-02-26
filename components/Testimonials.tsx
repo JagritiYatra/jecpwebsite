@@ -35,26 +35,26 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-10 md:py-12 px-4 bg-[var(--background-cream)]">
+    <section className="py-10 md:py-12 px-4 bg-[var(--primary-navy)]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-navy)] mb-3">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">
             Wisdom That Guides Us
           </h2>
-          <p className="text-gray-600">Here&apos;s What Our Clients Say</p>
+          <p className="text-white/60 text-xs sm:text-base">Here&apos;s What Our Clients Say</p>
         </div>
 
         {/* Cards Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col"
+              className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-6 hover:bg-white/15 transition-all duration-500 hover:-translate-y-1 flex flex-col border border-white/10"
             >
               {/* Image */}
-              <div className="flex justify-center mb-4">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-3 border-[var(--primary-orange)] shadow-md">
+              <div className="flex justify-center mb-2 sm:mb-4">
+                <div className="w-12 h-12 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 sm:border-3 border-[var(--primary-orange)] shadow-lg">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.speaker}
@@ -66,16 +66,16 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <p className="text-gray-600 text-sm italic leading-relaxed text-center flex-1 mb-4">
+              <p className="text-white/70 text-[10px] sm:text-sm italic leading-relaxed text-center flex-1 mb-2 sm:mb-4 line-clamp-4 sm:line-clamp-none">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
 
               {/* Name & Title */}
-              <div className="text-center border-t border-gray-100 pt-4">
-                <h4 className="font-bold text-[var(--primary-navy)] text-sm">
+              <div className="text-center border-t border-white/10 pt-2 sm:pt-4">
+                <h4 className="font-bold text-white text-[10px] sm:text-sm">
                   {testimonial.speaker}
                 </h4>
-                <p className="text-[var(--primary-orange)] text-xs mt-1">
+                <p className="text-[var(--primary-orange)] text-[8px] sm:text-xs mt-0.5 sm:mt-1 leading-tight">
                   {testimonial.title}
                 </p>
               </div>

@@ -4,17 +4,6 @@ import { useEffect } from 'react';
 
 export default function TogetherWeRise() {
   useEffect(() => {
-    // Load Facebook SDK
-    if (typeof window !== 'undefined' && !document.getElementById('facebook-jssdk')) {
-      const fbScript = document.createElement('script');
-      fbScript.id = 'facebook-jssdk';
-      fbScript.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0';
-      fbScript.async = true;
-      fbScript.defer = true;
-      fbScript.crossOrigin = 'anonymous';
-      document.body.appendChild(fbScript);
-    }
-
     // Load Instagram embed
     if (typeof window !== 'undefined' && !document.getElementById('instagram-embed')) {
       const igScript = document.createElement('script');
@@ -48,26 +37,10 @@ export default function TogetherWeRise() {
           </p>
         </div>
 
-        {/* Social Media Embeds - 4 Column Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {/* Facebook Page Embed */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden">
-            <div className="h-[400px] overflow-hidden">
-              <iframe
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fjecpurvanchal&tabs=timeline&width=300&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
-                width="100%"
-                height="400"
-                style={{ border: 'none', overflow: 'hidden' }}
-                scrolling="no"
-                frameBorder="0"
-                allowFullScreen={true}
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              />
-            </div>
-          </div>
-
+        {/* Social Media Embeds - 3 Column Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {/* Instagram Embed */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-500 overflow-hidden">
             <div className="h-[400px] overflow-hidden flex flex-col">
               {/* Instagram Header */}
               <a
@@ -105,7 +78,7 @@ export default function TogetherWeRise() {
           </div>
 
           {/* YouTube Video Embed */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-500 overflow-hidden">
             <div className="h-[400px] overflow-hidden">
               <iframe
                 width="100%"
@@ -120,7 +93,7 @@ export default function TogetherWeRise() {
           </div>
 
           {/* LinkedIn Post Embed */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-500 overflow-hidden">
             <div className="h-[400px] overflow-y-auto p-4">
               {/* LinkedIn Header */}
               <div className="flex items-center justify-between mb-4">
@@ -161,7 +134,7 @@ export default function TogetherWeRise() {
                 href="https://www.linkedin.com/company/jecpurvanchal"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 block text-center py-2 px-4 bg-[#0A66C2] text-white text-sm font-semibold rounded-full hover:bg-[#004182] transition-colors"
+                className="mt-4 block text-center py-2 px-4 bg-[#0A66C2] text-white text-sm font-semibold rounded-full hover:bg-[#004182] transition-all duration-300 hover:shadow-md"
               >
                 View on LinkedIn
               </a>

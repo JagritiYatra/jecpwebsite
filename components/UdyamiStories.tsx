@@ -63,48 +63,47 @@ export default function UdyamiStories() {
     <section className="py-10 md:py-12 px-4 bg-[var(--background-cream)]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-8">
+        <div className="flex items-start justify-between mb-6 sm:mb-8">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[var(--text-dark)]">
               Our Udyami<br />Stories
             </h2>
-          </div>
-          <div className="flex flex-col items-end gap-4">
-            <Link
-              href="/udyami-stories"
-              className="btn-primary inline-block"
-            >
-              View All
-            </Link>
-            <p className="text-gray-600 text-right max-w-md">
+            <p className="text-gray-600 text-xs sm:text-base max-w-md mt-2 hidden sm:block">
               Showcasing inspiring journeys of rural entrepreneurs transforming challenges
               into opportunities with JECP&apos;s support!
             </p>
           </div>
+          <Link
+            href="/udyami-stories"
+            className="btn-primary inline-block text-xs sm:text-sm shrink-0"
+          >
+            View All
+          </Link>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-8">
           {visibleUdyamis.map((udyami) => (
             <div
               key={udyami.id}
-              className="card-navy group cursor-pointer transition-transform hover:-translate-y-1"
+              className="card-navy group cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-36 sm:h-48 md:h-64 overflow-hidden">
                 <Image
                   src={udyami.image}
                   alt={udyami.name}
                   fill
-                  className="object-cover transition-transform group-hover:scale-105"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-0 left-0 right-0 h-1 bg-[var(--primary-orange)]" />
               </div>
-              <div className="p-4 text-center">
-                <h3 className="font-bold text-sm mb-1">{udyami.name}</h3>
-                <p className="text-xs text-gray-300 mb-3">{udyami.title}</p>
+              <div className="p-2 sm:p-4 text-center">
+                <h3 className="font-bold text-[10px] sm:text-sm mb-0.5 sm:mb-1 leading-tight">{udyami.name}</h3>
+                <p className="text-[8px] sm:text-xs text-gray-300 mb-1.5 sm:mb-3 leading-tight">{udyami.title}</p>
                 <Link
                   href={`/udyami-stories/${udyami.id}`}
-                  className="text-[var(--primary-orange)] text-xs font-semibold hover:underline"
+                  className="text-[var(--primary-orange)] text-[9px] sm:text-xs font-semibold hover:underline"
                 >
                   READ MORE &raquo;
                 </Link>
@@ -118,14 +117,14 @@ export default function UdyamiStories() {
           <button
             onClick={() => setCurrentPage((prev) => Math.max(0, prev - 1))}
             disabled={currentPage === 0}
-            className="text-gray-600 hover:text-[var(--primary-navy)] disabled:opacity-50 disabled:cursor-not-allowed"
+            className="text-gray-600 hover:text-[var(--primary-navy)] disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-300"
           >
             &laquo; Previous
           </button>
           <button
             onClick={() => setCurrentPage((prev) => Math.min(totalPages - 1, prev + 1))}
             disabled={currentPage === totalPages - 1}
-            className="text-gray-600 hover:text-[var(--primary-navy)] disabled:opacity-50 disabled:cursor-not-allowed"
+            className="text-gray-600 hover:text-[var(--primary-navy)] disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-300"
           >
             Next &raquo;
           </button>

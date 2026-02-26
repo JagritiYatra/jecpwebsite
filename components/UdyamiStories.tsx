@@ -94,7 +94,7 @@ export default function UdyamiStories() {
                   alt={udyami.name}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-0 left-0 right-0 h-1 bg-[var(--primary-orange)]" />
               </div>
